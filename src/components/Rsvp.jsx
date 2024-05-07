@@ -3,9 +3,12 @@ import React, { useState } from "react";
 export default function Rsvp() {
   const [name, setName] = useState("");
   const [isAttending, setIsAttending] = useState(false);
+  const [isNotAttending, setIsNotAttending] = useState(false);
   const [message, setMessage] = useState("");
 
   const attendees = ["John Doe", "Jane Smith"]; // Replace with your actual data
+
+  console.log(isNotAttending);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,15 +36,26 @@ export default function Rsvp() {
             onChange={(e) => setName(e.target.value)}
             className="w-full p-2 border bg-transparent rounded"
           />
-          <label className="flex items-center">
-            <input
-              type="checkbox"
-              checked={isAttending}
-              onChange={(e) => setIsAttending(e.target.checked)}
-              className="mr-2"
-            />
-            <span>Attending</span>
-          </label>
+          <div className="justify-between flex flex-row font-bold">
+            <label className="flex items-center">
+              <input
+                type="checkbox"
+                checked={isAttending}
+                onChange={(e) => setIsAttending(e.target.checked)}
+                className="mr-2"
+              />
+              <span>Attending</span>
+            </label>
+            <label className="flex items-center">
+              <input
+                type="checkbox"
+                checked={isNotAttending}
+                onChange={(e) => setIsNotAttending(e.target.checked)}
+                className="mr-2"
+              />
+              <span>Not Attending</span>
+            </label>
+          </div>
           <button
             type="submit"
             className="w-full p-2 bg-blue-500 text-white rounded"
