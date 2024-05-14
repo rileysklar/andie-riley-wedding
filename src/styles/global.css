@@ -5,74 +5,63 @@
  */
 
 :root {
-  --accent: #9ef2ff;
-  --accent-dark: #000d8a;
-  --black: 15, 18, 25;
-  --gray: 96, 115, 159;
-  --gray-light: 229, 233, 240;
-  --gray-dark: 34, 41, 57;
+  --accent: #a14a76;
+  --accent-dark: #fab2ea;
+  --black: 40, 38, 44;
+  --gray: 183, 200, 181;
+  --gray-light: 251, 251, 242;
+  --gray-dark: 40, 38, 44;
   --gray-gradient: rgba(var(--gray-light), 50%), #fff;
   --box-shadow: 0 2px 6px rgba(var(--gray), 25%),
     0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
 }
 
+html {
+  background-color: #fbfbf2;
+  color: #28262c;
+  --accent: #fab2ea
+  --black: #28262c
+  --white: #fbfbf2;
+}
+
 html.dark {
-  background-color: #1c1c1c;
-  color: #fff;
-  --accent: #278157;
+  background-color: #28262c;
+  color: #fbfbf2;
+  --accent: #a14a76;
+  --white: #28262c
+  --black: #fbfbf2;
 }
 
 .dark .nav-links a {
-  color: #fff;
+  color: #fbfbf2;
 }
 
 @font-face {
-  font-family: "Atkinson";
-  src: url("/fonts/atkinson-regular.woff") format("woff");
+  font-family: "Beth";
+  src: url("/fonts/BethEllen-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
-  font-family: "Atkinson";
-  src: url("/fonts/atkinson-bold.woff") format("woff");
-  font-weight: 700;
+  font-family: "Epilogue";
+  src: url("/fonts/Epilogue-VariableFont_wght.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Sounds";
-  src: url("/fonts/Whatsoundpoundsnormal-zJza.woff") format("woff");
-  font-weight: normal;
+  font-family: "Josefin";
+  src: url("/fonts/JosefinSans-VariableFont_wght.ttf") format("woff");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Avelire";
-  src: url("/fonts/Avelire.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Kolak";
-  src: url("/fonts/Kolak.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Moxa";
-  src: url("/fonts/Moxa.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 body {
-  font-family: "", sans-serif;
+  font-family: "Josefin", sans-serif;
   margin: 0;
   padding: 0;
   text-align: left;
@@ -96,7 +85,7 @@ h5,
 h6 {
   margin: 0 0 0.5rem 0;
   line-height: 1.2;
-  font-family: "Kolak", sans-serif;
+  font-family: "Beth", sans-serif;
 }
 h1 {
   font-size: 3.052em;

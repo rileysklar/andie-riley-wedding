@@ -60,16 +60,16 @@ export default function Faq() {
   ];
 
   const AccordionItem = ({ question, answer, isOpen, onClick }) => (
-    <div className="border-b border-gray-200">
+    <div className=" border-b border-gray-200">
       <button
-        className="w-full text-left py-3 px-4 cursor-pointer focus:outline-none"
+        className="w-full flex flex-row justify-between text-left py-3 px-4 cursor-pointer focus:outline-none"
         onClick={onClick}
       >
         {question}
-        <span className="float-right">{isOpen ? "-" : "+"}</span>
+        <div className="">{isOpen ? "-" : "+"}</div>
       </button>
       {isOpen && (
-        <p className="p-4 mb-4 bg-[var(--accent)] rounded-lg font-sans ">
+        <p className="p-4 mb-4 bg-[var(--accent)] text-white rounded-lg ">
           {answer}
         </p>
       )}

@@ -1,14 +1,87 @@
 import React, { useState } from "react";
+import Autosuggest from "react-autosuggest";
 
 export default function Rsvp() {
   const [name, setName] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
   const [isAttending, setIsAttending] = useState(false);
-  const [isNotAttending, setIsNotAttending] = useState(false);
   const [message, setMessage] = useState("");
 
-  const attendees = ["John Doe", "Jane Smith"]; // Replace with your actual data
+  const attendees = [
+    "Mimi Goc",
+    "Ric Goc",
+    "Remy Goc",
+    "Griff Goc",
+    "Cait Goc",
+    "Manette",
+    "Michelle",
+    "Jack",
+    "Andy",
+    "Cindy",
+    "Ren",
+    "Eric",
+    "Riki",
+    "Scott",
+    "Tai",
+    "Ash",
+    "Chih",
+    "Matt",
+    "Jordan",
+    "Elizabeth",
+    "Noah",
+    "Ben",
+    "Calder",
+    "Paula Sklar",
+    "Jerry Sklar",
+    "Kelley Dougherty",
+    "Britt Dougherty",
+    "Cassidy Eastburn",
+    "Britton Eastburn",
+    "Ken Sklar",
+    "David",
+    "Alan Windtz",
+    "Robin Windtz",
+    "Janelle Hussey",
+    "Chris Hussey",
+    "Alan Sklar",
+    "Derek Sklar",
+    "John Kelley",
+    "Laura Kelley",
+    "Caroline Kelley",
+  ]; // Replace with your actual data
 
-  console.log(isNotAttending);
+  const theme = {
+    suggestionsList: "",
+    suggestion: "bg-[var(--accent)] rounded-md mt-2 text-white cursor-pointer",
+    suggestionHighlighted: "",
+  };
+
+  const getSuggestions = (value) => {
+    const inputValue = value.trim().toLowerCase();
+    const inputLength = inputValue.length;
+
+    return inputLength < 3
+      ? []
+      : attendees.filter(
+          (attendee) =>
+            attendee.toLowerCase().slice(0, inputLength) === inputValue
+        );
+  };
+
+  const onSuggestionsFetchRequested = ({ value }) => {
+    setSuggestions(getSuggestions(value));
+  };
+
+  const onSuggestionsClearRequested = () => {
+    setSuggestions([]);
+  };
+
+  const inputProps = {
+    placeholder: "Your name",
+    value: name,
+    onChange: (_, { newValue }) => setName(newValue),
+    className: "w-full p-2 border rounded-xl",
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,49 +95,72 @@ export default function Rsvp() {
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="p-6 max-w-xl">
-        <h1 className="text-4xl font-bold mb-4">RSVP</h1>
-        <p className="mb-6">
-          The Stakeout In Taos, New Mexico - April 12, 2025
-        </p>
-        <form onSubmit={handleSubmit} className="space-y-4 ">
-          <input
-            type="text"
-            placeholder="Your name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="w-full p-2 border bg-transparent rounded"
-          />
-          <div className="justify-between flex flex-row font-bold">
-            <label className="flex items-center">
-              <input
-                type="checkbox"
-                checked={isAttending}
-                onChange={(e) => setIsAttending(e.target.checked)}
-                className="mr-2"
-              />
-              <span>Attending</span>
-            </label>
-            <label className="flex items-center">
-              <input
-                type="checkbox"
-                checked={isNotAttending}
-                onChange={(e) => setIsNotAttending(e.target.checked)}
-                className="mr-2"
-              />
-              <span>Not Attending</span>
+    <div className="p-6 flex flex-col items-center bg-gray-100 dark:bg-gray-900">
+      <h1 className="text-4xl font-bold mb-4 ">RSVP</h1>
+      <p className="mb-6 text-2xl ">
+        The Stakeout In Taos, New Mexico - April 12, 2025
+      </p>
+      <form
+        onSubmit={handleSubmit}
+        className="w-full max-w-md text-[var(--black)] shadow-lg rounded-xl px-8 pt-6 pb-8 mb-4"
+      >
+        <Autosuggest
+          suggestions={suggestions}
+          theme={theme}
+          onSuggestionsFetchRequested={onSuggestionsFetchRequested}
+          onSuggestionsClearRequested={onSuggestionsClearRequested}
+          getSuggestionValue={(suggestion) => suggestion}
+          renderSuggestion={(suggestion) => (
+            <div className="py-2 px-3">{suggestion}</div>
+          )}
+          inputProps={{
+            ...inputProps,
+            className:
+              "shadow appearance-none border rounded text-[var(--black)] bg-[var(--white)] w-full py-2 px-3  focus:outline-none focus:shadow-outline",
+          }}
+        />
+        <div className="mt-4 flex items-center justify-between">
+          <div className="flex items-center mr-4">
+            <input
+              type="radio"
+              id="attending"
+              name="attendance"
+              checked={isAttending}
+              onChange={(e) => setIsAttending(e.target.checked)}
+              className="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+            />
+            <label
+              htmlFor="attending"
+              className="text-gray-700 dark:text-gray-300"
+            >
+              Attending
             </label>
           </div>
-          <button
-            type="submit"
-            className="w-full p-2 bg-blue-500 text-white rounded"
-          >
-            Submit
-          </button>
-        </form>
-        {message && <p className="mt-4">{message}</p>}
-      </div>
+          <div className="flex items-center ">
+            <input
+              type="radio"
+              id="notAttending"
+              name="attendance"
+              checked={!isAttending}
+              onChange={(e) => setIsAttending(!e.target.checked)}
+              className="mr-2 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+            />
+            <label
+              htmlFor="notAttending"
+              className="text-gray-700 dark:text-gray-300"
+            >
+              Not Attending
+            </label>
+          </div>
+        </div>
+        <button
+          type="submit"
+          className="mt-4 w-full p-2 bg-[var(--accent)]  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        >
+          Submit
+        </button>
+        {message && <p className="mt-4 text-center">{message}</p>}
+      </form>
     </div>
   );
 }

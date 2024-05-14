@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Faq from "../components/Faqs";
 import Rsvp from "../components/Rsvp";
+import TopNav from "../components/TopNav";
 ---
 
 <!DOCTYPE html>
@@ -13,7 +14,8 @@ import Rsvp from "../components/Rsvp";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <Header />
+    <!-- <Header /> -->
+    <TopNav />
     <div
       class="bg-[url('/hero.png')] bg-cover bg-center h-[80svh] flex items-center justify-center"
     >
