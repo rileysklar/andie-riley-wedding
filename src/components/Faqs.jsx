@@ -96,6 +96,9 @@ export default function Faq() {
 
   return (
     <div className="flex flex-col justify-between p-8">
+      <div class="p-8 w-full flex flex-row items-center justify-center align-center ">
+        <img src="/logo.png" alt="Taos, New Mexico" className="max-w-[400px]" />
+      </div>
       <Accordion items={faqData} />
       <div className="flex flex-col items-center align-center justify-end"></div>
     </div>

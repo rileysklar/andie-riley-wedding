@@ -6,6 +6,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Faq from "../components/Faqs";
 import Rsvp from "../components/Rsvp";
 import TopNav from "../components/TopNav";
+import type { loadApp } from "astro/app/node";
+import Location from "../components/Location";
 ---
 
 <!DOCTYPE html>
@@ -17,9 +19,19 @@ import TopNav from "../components/TopNav";
     <!-- <Header /> -->
     <TopNav />
     <div
-      class="bg-[url('/hero.png')] bg-cover bg-center h-[80svh] flex items-center justify-center"
+      class="hero-gradient text-[var(--white)] flex flex-col items-end align-center justify-end bg-cover bg-top h-[80svh] mt-6 flex items-center p-8"
     >
-    </div><Rsvp client:load />
+      <h1 class="text-white text-center text-6xl mb-4 drop-shadow-md">
+        We're getting married
+      </h1>
+
+      <p class="text-white text-2xl text-center drop-shadow-md">
+        Meet us in the High Desert of Taos, New Mexico
+      </p>
+    </div>
+    <Rsvp client:load />
+    <Location client:load />
+
     <Faq client:load />
 
     <Footer />

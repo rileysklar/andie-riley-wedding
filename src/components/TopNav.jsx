@@ -31,16 +31,9 @@ export default function TopNav() {
       }`}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
-        <div
-          className="logo duration-800 transition-all"
-          style={{ width: isScrolled ? "75px" : "125px" }}
-        >
+        <div className="w-full flex duration-800 transition-all">
           <a href="/">
-            <img
-              className="h-auto"
-              src={isScrolled ? "/logo-black.png" : "/logo-white.png"}
-              alt="Logo"
-            />
+            <h3 className="text-[24px]">Andie & Riley</h3>
           </a>
         </div>
         {/* Mobile menu button */}
@@ -62,12 +55,12 @@ export default function TopNav() {
             Info
           </a>
           <a
-            href="https://tolbertscms.com/wp-content/uploads/2024/04/TolbertsNewMenu010324.pdf"
+            href="/about"
             className={`text-xl hover:underline ${
               isScrolled ? "text-black" : "text-white"
             }`}
           >
-            About
+            Love Story
           </a>
         </div>
       </div>

@@ -36,6 +36,32 @@ html.dark {
   color: #fbfbf2;
 }
 
+.hero-gradient {
+  background: linear-gradient(180deg, rgba(255,255,255,0) 53%, rgba(28, 28, 28, 0.579) 98%), url('/hero.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.pattern {
+  position: relative;
+}
+
+.pattern::before {
+  content: "";
+  background: url('/pattern.svg');
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 0.2; /* Adjust this value to change the transparency */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
 @font-face {
   font-family: "Beth";
   src: url("/fonts/BethEllen-Regular.woff") format("woff");
@@ -58,6 +84,10 @@ html.dark {
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+}
+
+.josefin {
+  font-family: "Josefin", sans-serif;
 }
 
 body {

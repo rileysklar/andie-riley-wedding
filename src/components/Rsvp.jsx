@@ -56,17 +56,16 @@ export default function Rsvp() {
     suggestionHighlighted: "",
   };
 
-  const getSuggestions = (value) => {
+  function getSuggestions(value) {
     const inputValue = value.trim().toLowerCase();
     const inputLength = inputValue.length;
 
     return inputLength < 3
       ? []
-      : attendees.filter(
-          (attendee) =>
-            attendee.toLowerCase().slice(0, inputLength) === inputValue
+      : attendees.filter((attendee) =>
+          attendee.toLowerCase().includes(inputValue)
         );
-  };
+  }
 
   const onSuggestionsFetchRequested = ({ value }) => {
     setSuggestions(getSuggestions(value));
@@ -95,11 +94,15 @@ export default function Rsvp() {
   };
 
   return (
-    <div className="p-6 flex flex-col items-center bg-gray-100 dark:bg-gray-900">
-      <h1 className="text-4xl font-bold mb-4 ">RSVP</h1>
-      <p className="mb-6 text-2xl ">
-        The Stakeout In Taos, New Mexico - April 12, 2025
+    <div className="p-8 flex flex-col items-center bg-gray-100 dark:bg-gray-900">
+      <h1 className="text-4xl font-bold mb-0 josefin">RSVP</h1>
+      <p className="text-center">
+        Please select your name and your family members who will be celebrating
+        with us
       </p>
+      {/* <p className="mb-6 text-2xl text-center">
+        The Stakeout In Taos, New Mexico - April 12, 2025
+      </p> */}
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-md text-[var(--black)] shadow-lg rounded-xl px-8 pt-6 pb-8 mb-4"
