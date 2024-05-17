@@ -1,61 +1,80 @@
 import React, { useState } from "react";
 
-export default function Faq() {
+export default function Faq(theme) {
   const faqData = [
-    {
-      question: "Who is tying the knot?",
-      answer:
-        "Andie Goc from the breezy Bay Area and Riley Sklar from the vibrant city of Austin are joining forces in matrimony. Get ready for a coast-to-coast celebration!",
-    },
-    {
-      question: "When's the big day?",
-      answer:
-        "Mark your calendars! The love fest is set for April 14, 2025. Don’t be late!",
-    },
     {
       question: "Where should we go to celebrate?",
       answer:
-        "The party will be at The Stakeout in Taos. It's the perfect spot to capture our wild spirits and love for breathtaking views!",
+        "Our venue, The Stakeout, is located at 101 Stake Out Dr, Ranchos De Taos, NM 87557. More information will be shared regarding transportation to the venue.",
     },
     {
-      question: "What's the vibe for attire?",
+      question: "What time should I arrive to the ceremony?",
+      answer: "TBD",
+    },
+    {
+      question: "What time does the party end?",
+      answer: "All guests are required to be off the property by midnight.",
+    },
+    {
+      question: "What’s the vibe for attire?",
       answer:
-        "Think vibrant and colorful, inspired by the stunning Southwest. It’s all about bright patterns and fun under the sun!",
+        "We want you to feel glamorous while celebrating with us in the high desert. Imagine yourself stepping into a modern-day '60s or '70s disco, but the disco sits atop Outlaw Hill in Taos, NM. The dress code is formal with colors and textures that radiate elegance and fun. We encourage bold, vibrant colors and bright jewel tones to capture the magic of the evening. Picture yourself in your favorite winter coat, perhaps a fur gem that’s been tucked away in your closet. Feathers and velvet are most certainly welcomed to enhance the festive, retro vibe. Dress to impress and get ready to dance the night away under the desert stars! Looking for inspiration? INSERT PINTREST LINK",
+    },
+    {
+      question: "Will the wedding be outdoors?",
+      answer:
+        "Yes, the ceremony will take place outdoors. The reception location has indoor and outdoor spaces, with most of the evening taking place indoors. Please keep this in mind when selecting your attire for the event.",
     },
     {
       question: "How chilly will it get?",
       answer:
-        "It's an outdoor affair in April, so expect it to be nippy. Wrap up warm so you can party all night without turning into an ice cube!",
-    },
-    {
-      question: "Do you have a registry?",
-      answer:
-        "We're lucky enough to have everything we need for our next adventure—except maybe a map for Riley! Instead of traditional gifts, we'd love if you could help make our dream honeymoon come true. Details for our honeymoon fund and RSVP info can be found on our site, along with the saga of our love story!",
+        "Taos is located in northern New Mexico, 13,000 feet above sea level. April weather starts to turn towards spring. You can expect the sun to be very strong during the day (65-70). The temperatures drop dramatically in the evening (35-40). Please plan your attire accordingly. We recommend a very warm coat! If you are cold, please consider joining us on the dance floor.",
     },
     {
       question: "Can I bring a plus-one?",
       answer:
-        "Got a special someone or a stellar dance partner? Please let us know in your RSVP if you’re bringing a plus-one so we can save them a seat!",
+        "We unfortunately cannot accommodate additional guests. Due to limited capacity, we can only allow the people named on your invitation. Your invitation will be made out to “{Your Name} & Guest” if a plus one has been given to you.",
+    },
+    {
+      question: "Are children welcome?",
+      answer:
+        "YES! Your children are more than welcome! Please note, they are strongly discouraged if they will require you to leave the dancefloor earlier than 10pm. Children should also follow the described dress code. They will look back on their outfit with pride! Your invitation will be made out to “The {Your Last Name} Family” referencing your children have been invited.",
+    },
+    {
+      question: "What should I do if I can’t make it?",
+      answer:
+        "You will be missed! If you cannot make it, please let us know as soon as possible by RSVP-ing “no” so we can plan accordingly.",
+    },
+    {
+      question: "What if I do not RSVP in time?",
+      answer:
+        "We will miss celebrating with you! We require you and any additional invited guests to RSVP by January 15th, 2025. Any RSVPs received after this date will be marked as “no” so please don’t RSVP late!",
     },
     {
       question: "Is there parking available?",
-      answer:
-        "Yes, there’s ample parking at The Stakeout. Just follow the signs and maybe a couple of bunnies. They know the best spots!",
+      answer: "Yes, parking is available on-site at the venue.",
     },
     {
-      question: "What's on the menu?",
-      answer:
-        "Prepare for a culinary adventure with local flavors and festive delights. We'll cater to all diets, so let us know your preferences and we'll make sure you're more than satisfied!",
+      question: "Is there transportation to and from the venue?",
+      answer: "Coming Soon",
     },
     {
-      question: "What should I do if I arrive early?",
+      question: "What’s the menu?",
       answer:
-        "Early bird gets the worm! Or in this case, the best views of Taos. Drop your bags and explore the town, or join some of us for a pre-wedding gathering. Details to follow in our updates!",
+        "The chef at The Stakeout is from the south. We are drawing inspiration from her experience and have decided on a southern focused menu. There will be meat, gumbo, veggie options and bread!!!",
     },
     {
-      question: "Will there be dancing?",
+      question: "I have a dietary restriction, what should I do?",
       answer:
-        "Absolutely! After we say ‘I do,’ it’s time to dance like nobody’s watching. Get ready to bust some moves on the dance floor with us!",
+        "There will be food options for vegetarian and gluten free diets. Please reach out to Andie or Riley to share any additional dietary restrictions so we can plan accordingly.",
+    },
+    {
+      question: "Do you have a registry?",
+      answer: "We do! You can find our registry here – INSERT LINK",
+    },
+    {
+      question: "What should I do and see in New Mexico?",
+      answer: "Coming Soon",
     },
   ];
 
@@ -97,7 +116,19 @@ export default function Faq() {
   return (
     <div className="flex flex-col justify-between p-8">
       <div class="p-8 w-full flex flex-row items-center justify-center align-center ">
-        <img src="/logo.png" alt="Taos, New Mexico" className="max-w-[400px]" />
+        {theme === "light" ? (
+          <img
+            src="/logo.svg"
+            alt="Taos, New Mexico"
+            className="max-w-[400px]"
+          />
+        ) : (
+          <img
+            src="/logo-wht.svg"
+            alt="Taos, New Mexico"
+            className="max-w-[400px]"
+          />
+        )}
       </div>
       <Accordion items={faqData} />
       <div className="flex flex-col items-center align-center justify-end"></div>

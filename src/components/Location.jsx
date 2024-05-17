@@ -9,9 +9,11 @@ export default function Location() {
         />
 
         <div className="flex flex-col items-center align-center justify-end">
-          <h1 className="text-center">Taos, New Mexico</h1>
-          <h5 className="josefin">101 Stakeout Dr Ranchos de Taos, NM</h5>
-          <p className="text-center">April 12, 2025</p>
+          <h3 className="text-center ">Taos, New Mexico</h3>
+          <h5 className="josefin text-center mt-4">
+            101 Stakeout Dr.<br></br> Ranchos de Taos, NM
+          </h5>
+          {/* <p className="text-center">April 12, 2025</p> */}
         </div>
       </div>
     </div>

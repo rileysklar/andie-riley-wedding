@@ -1,8 +1,6 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
+* {
+  scroll-behavior: smooth;
+}
 
 :root {
   --accent: #a14a76;
@@ -19,16 +17,16 @@
 html {
   background-color: #fbfbf2;
   color: #28262c;
-  --accent: #fab2ea
-  --black: #28262c
+  --accent: #fab2ea;
+  --black: #28262c;
   --white: #fbfbf2;
 }
 
 html.dark {
   background-color: #28262c;
   color: #fbfbf2;
-  --accent: #a14a76;
-  --white: #28262c
+  --accent: #93a391;
+  --white: #28262c;
   --black: #fbfbf2;
 }
 
@@ -37,11 +35,16 @@ html.dark {
 }
 
 .hero-gradient {
-  background: linear-gradient(180deg, rgba(255,255,255,0) 53%, rgba(28, 28, 28, 0.579) 98%), url('/hero.png');
+  background: linear-gradient(
+      180deg,
+      rgba(6, 6, 6, 0.3) 3%,
+      rgba(28, 28, 28, 0.579) 98%
+    ),
+    url("/hero.png");
   background-position: top center;
+  /* background-attachment: fixed; */
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 .pattern {
@@ -50,7 +53,7 @@ html.dark {
 
 .pattern::before {
   content: "";
-  background: url('/pattern.svg');
+  background: url("/pattern.svg");
   background-attachment: fixed;
   background-size: cover;
   opacity: 0.2; /* Adjust this value to change the transparency */
@@ -59,7 +62,7 @@ html.dark {
   bottom: 0;
   right: 0;
   position: absolute;
-  z-index: -1;   
+  z-index: -1;
 }
 
 @font-face {
@@ -113,7 +116,6 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 0.5rem 0;
   line-height: 1.2;
   font-family: "Beth", sans-serif;
 }
@@ -122,6 +124,7 @@ h1 {
 }
 h2 {
   font-size: 2.441em;
+  font-family: "Josefin", sans-serif;
 }
 h3 {
   font-size: 1.953em;

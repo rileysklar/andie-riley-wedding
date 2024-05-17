@@ -2,11 +2,16 @@
 const today = new Date();
 ---
 
-<footer class="flex flex-col justify-center align-center items-center">
-  &copy; 2025 Riley and Andie
-  <p class="text-sm">
-    Built by <a class="text-[var(--accent)" href="https://rileysklar.io"
-      >Riley</a
-    > with Astro 🚀 styled with Tailwind.
-  </p>
+<footer class="flex flex-col justify-center align-center items-center p-8">
+  <div
+    class="p-4 bg-[var(--accent)] text-[var(--white)] w-full rounded-lg flex flex-col justify-center align-center items-center"
+  >
+    <p class="text-sm mb-0 text-center">
+      Built by <a
+        class="text-[var(--white)] underline"
+        "
+        href="https://rileysklar.io">Riley</a
+      > with Astro 🚀 & styled with Tailwind.
+    </p><p class="text-sm mb-0">Designed by Andie. &copy; 2025</p>
+  </div>
 </footer>

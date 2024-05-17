@@ -1,6 +1,5 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Faq from "../components/Faqs";
@@ -8,6 +7,7 @@ import Rsvp from "../components/Rsvp";
 import TopNav from "../components/TopNav";
 import type { loadApp } from "astro/app/node";
 import Location from "../components/Location";
+import Hero from "../components/Hero";
 ---
 
 <!DOCTYPE html>
@@ -15,25 +15,12 @@ import Location from "../components/Location";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
+  <TopNav client:load />
   <body>
-    <!-- <Header /> -->
-    <TopNav />
-    <div
-      class="hero-gradient text-[var(--white)] flex flex-col items-end align-center justify-end bg-cover bg-top h-[80svh] mt-6 flex items-center p-8"
-    >
-      <h1 class="text-white text-center text-6xl mb-4 drop-shadow-md">
-        We're getting married
-      </h1>
-
-      <p class="text-white text-2xl text-center drop-shadow-md">
-        Meet us in the High Desert of Taos, New Mexico
-      </p>
-    </div>
+    <Hero client:load />
     <Rsvp client:load />
     <Location client:load />
-
     <Faq client:load />
-
-    <Footer />
-  </body>
+    <Footer /></body
+  >
 </html>

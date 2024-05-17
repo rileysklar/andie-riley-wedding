@@ -1,20 +1,17 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
-import ThemeIcon from "./ThemeIcon.astro";
 ---
 
 <header>
   <nav>
-    <h2><a href="/">{SITE_TITLE}</a></h2>
-    <div class="internal-links">
-      <HeaderLink href="/">Home</HeaderLink>
-      <HeaderLink href="/blog">Info</HeaderLink>
-      <HeaderLink href="/about">Love Story</HeaderLink>
+    <div class="flex flex-row gap-4">
+      <h2><a href="/">{SITE_TITLE}</a></h2><ThemeIcon />
     </div>
 
-    <div class="social-links">
-      <ThemeIcon />
+    <div class="internal-links">
+      <HeaderLink href="/blog">Info</HeaderLink>
+      <HeaderLink href="/about">Love Story</HeaderLink>
     </div>
   </nav>
 </header>

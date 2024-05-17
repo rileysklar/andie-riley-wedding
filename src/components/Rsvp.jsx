@@ -4,15 +4,13 @@ import Autosuggest from "react-autosuggest";
 export default function Rsvp() {
   const [name, setName] = useState("");
   const [suggestions, setSuggestions] = useState([]);
-  const [isAttending, setIsAttending] = useState(false);
+  const [isAttending, setIsAttending] = useState(true);
   const [message, setMessage] = useState("");
 
   const attendees = [
-    "Mimi Goc",
-    "Ric Goc",
+    "Rick & Mimi Goc",
     "Remy Goc",
-    "Griff Goc",
-    "Cait Goc",
+    "Griff, Caitlyn, Atlas and Beckham Goc",
     "Manette",
     "Michelle",
     "Jack",
@@ -31,28 +29,20 @@ export default function Rsvp() {
     "Noah",
     "Ben",
     "Calder",
-    "Paula Sklar",
-    "Jerry Sklar",
-    "Kelley Dougherty",
-    "Britt Dougherty",
-    "Cassidy Eastburn",
-    "Britton Eastburn",
-    "Ken Sklar",
-    "David",
-    "Alan Windtz",
-    "Robin Windtz",
-    "Janelle Hussey",
-    "Chris Hussey",
-    "Alan Sklar",
-    "Derek Sklar",
-    "John Kelley",
-    "Laura Kelley",
-    "Caroline Kelley",
+    "Paula & Jerry Sklar",
+    "Kelley, Britt, Beckett, Claire Grace, & Charlie Anne Dougherty",
+    "Cassidy & Britton Eastburn",
+    "Ken Sklar & David",
+    "Alan & Robin Windtz",
+    "Janelle, Chris and Braden Hussey",
+    "Alan & Derek Sklar",
+    "John, Laura and Caroline Kelley",
   ]; // Replace with your actual data
 
   const theme = {
     suggestionsList: "",
-    suggestion: "bg-[var(--accent)] rounded-md mt-2 text-white cursor-pointer",
+    suggestion:
+      "bg-[var(--black) hover:bg-[var(--accent)] hover:text-white rounded-md mt-2 border-black text-[var(--white)]) cursor-pointer",
     suggestionHighlighted: "",
   };
 
@@ -94,11 +84,14 @@ export default function Rsvp() {
   };
 
   return (
-    <div className="p-8 flex flex-col items-center bg-gray-100 dark:bg-gray-900">
+    <div
+      id="rsvp"
+      className="p-8 flex flex-col items-center bg-gray-100 dark:bg-gray-900"
+    >
       <h1 className="text-4xl font-bold mb-0 josefin">RSVP</h1>
       <p className="text-center">
-        Please select your name and your family members who will be celebrating
-        with us
+        Please select your name, family, or party members who will be
+        celebrating with us!
       </p>
       {/* <p className="mb-6 text-2xl text-center">
         The Stakeout In Taos, New Mexico - April 12, 2025
@@ -121,6 +114,14 @@ export default function Rsvp() {
             className:
               "shadow appearance-none border rounded text-[var(--black)] bg-[var(--white)] w-full py-2 px-3  focus:outline-none focus:shadow-outline",
           }}
+        />{" "}
+        <label htmlFor="message"></label>
+        <textarea
+          id="message"
+          value={message}
+          placeholder="Message (optional)"
+          className="py-2 px-3 w-full p-2 border mt-4 rounded text-[var(--black)] bg-[var(--white)]"
+          onChange={(e) => setMessage(e.target.value)}
         />
         <div className="mt-4 flex items-center justify-between">
           <div className="flex items-center mr-4">
