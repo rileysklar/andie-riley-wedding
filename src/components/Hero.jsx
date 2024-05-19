@@ -1,3 +1,5 @@
+import Countdown from "./Countdown";
+
 export default function Hero() {
   return (
     <div class="hero-gradient gap-4 text-[var(--white)] flex flex-col items-end align-center justify-end bg-cover bg-top h-[80svh] flex items-center p-8">
@@ -8,10 +10,14 @@ export default function Hero() {
       <p class="text-white text-2xl text-center mb-0 drop-shadow-md">
         Meet us in the High Desert of Taos, New Mexico
       </p>
-      <a href="#rsvp">
-        <button class="text-[var(--white)] bg-[var(--black)] pt-2 pb-1 px-4 mb-0 rounded-full text-2xl text-center drop-shadow-md">
+      <a
+        className="flex flex-col items-center align-center justify-center gap-4"
+        href="#rsvp"
+      >
+        <button class="text-white bg-black pt-2 pb-1 px-4 mb-0 rounded-full text-2xl text-center drop-shadow-md">
           April 12, 2025
         </button>
+        <Countdown />
       </a>
     </div>
   );
