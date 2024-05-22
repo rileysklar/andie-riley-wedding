@@ -37,7 +37,7 @@ export default function Rsvp() {
     "Janelle, Chris and Braden Hussey",
     "Alan & Derek Sklar",
     "John, Laura and Caroline Kelley",
-  ]; // Replace with your actual data
+  ];
 
   const theme = {
     suggestionsList: "",
