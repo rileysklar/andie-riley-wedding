@@ -6,7 +6,7 @@ const TopNav = () => {
 
   return (
     <header>
-      <nav className="flex flex-row justify-between items-center p-4 w-full">
+      <nav className="flex flex-row justify-between items-center p-4 w-full cactus">
         <div className="flex flex-row gap-4">
           <a className="" href="/">
             <h1 className="mb-0 text-xl beth"> Andie & Riley </h1>

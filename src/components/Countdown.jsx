@@ -50,7 +50,7 @@ const Countdown = () => {
   });
 
   return (
-    <div className="flex gap-4 items-center align-center justify-center text-white">
+    <div className="flex gap-4 items-center align-center justify-center text-[#fff6e4]">
       {timerComponents.length ? timerComponents : <span>Time's up!</span>}
     </div>
   );

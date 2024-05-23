@@ -15,19 +15,19 @@
 }
 
 html {
-  background-color: #fbfbf2;
+  background-color: #fff6e4;
   color: #28262c;
   --accent: #fab2ea;
-  --black: #28262c;
-  --white: #fbfbf2;
+  --black: #1f1d24;
+  --white: #fff6e4;
 }
 
 html.dark {
-  background-color: #28262c;
+  background-color: #272232;
   color: #fbfbf2;
   --accent: #93a391;
   --white: #28262c;
-  --black: #fbfbf2;
+  --black: #fff6e4;
 }
 
 .dark .nav-links a {
@@ -79,6 +79,12 @@ html.dark {
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+}
+
+.cactus {
+  background-image: url("/public/cactus.svg");
+  background-size: 1000px;
+  background-repeat: repeat;
 }
 
 @font-face {

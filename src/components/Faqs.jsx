@@ -115,7 +115,7 @@ export default function Faq(theme) {
 
   return (
     <div className="flex flex-col justify-between p-8">
-      <div class="p-8 w-full flex flex-row items-center justify-center align-center ">
+      <div class="p-8 w-full flex flex-row items-center justify-center rounded-full align-center ]">
         {theme === "light" ? (
           <img
             src="/logo.svg"

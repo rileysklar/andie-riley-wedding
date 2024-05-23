@@ -86,7 +86,7 @@ export default function Rsvp() {
   return (
     <div
       id="rsvp"
-      className="p-8 flex flex-col items-center bg-gray-100 dark:bg-gray-900"
+      className="p-8 flex flex-col items-center bg-gray-100 dark:bg-gray-900 cactus"
     >
       <h1 className="text-4xl font-bold mb-0 josefin">RSVP</h1>
       <p className="text-center">
@@ -98,7 +98,7 @@ export default function Rsvp() {
       </p> */}
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-md text-[var(--black)] shadow-lg rounded-xl px-8 pt-6 pb-8 mb-4"
+        className="w-full max-w-md text-[var(--black)] bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 shadow-lg rounded-xl px-8 pt-6 pb-8 mb-4"
       >
         <Autosuggest
           suggestions={suggestions}
@@ -123,6 +123,10 @@ export default function Rsvp() {
           className="py-2 px-3 w-full p-2 border mt-4 rounded text-[var(--black)] bg-[var(--white)]"
           onChange={(e) => setMessage(e.target.value)}
         />
+        <p className="text-center">
+          Please let us know if everyone in your party will be attending, only
+          some people, and whether there are any dietary restrictions.
+        </p>
         <div className="mt-4 flex items-center justify-between">
           <div className="flex items-center mr-4">
             <input
