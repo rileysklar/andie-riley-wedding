@@ -5,4 +5,4 @@ pubDate: "May 07 2024"
 heroImage: "/flowers.jpg"
 ---
 
-## Tico is a dog
+## Schedule of events
