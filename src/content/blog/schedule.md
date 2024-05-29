@@ -6,3 +6,5 @@ heroImage: "/flowers.jpg"
 ---
 
 ## Schedule of events
+
+<!-- hello -->
