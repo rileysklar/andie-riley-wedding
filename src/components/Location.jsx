@@ -6,7 +6,7 @@ export default function Location() {
         <img
           src="/stakeout-5.jpg"
           alt="Taos, New Mexico"
-          className=" rounded-lg shadow-lg"
+          className=" rounded-lg shadow-lg max-w-[800px] w-full h-auto"
         />
 
         <div className="flex flex-col items-center align-center justify-end">
@@ -19,7 +19,7 @@ export default function Location() {
 
           {/* <p className="text-center">April 12, 2025</p> */}
           <a href="https://www.theknot.com/us/riley-sklar-and-andie-goc-apr-2025/rsvp">
-            <div className="text-2xl font-bold mb-0 josefin bg-[var(--accent)] mt-4 text-white px-5 py-2 pt-3 rounded-full">
+            <div className=" josefin text-white shadow-2xl my-button mx-auto h-16 w-64 mt-4 pt-[4px] flex justify-center items-center rounded-lg cursor-pointer relative overflow-hidden">
               Click to RSVP
             </div>
           </a>
