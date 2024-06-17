@@ -88,15 +88,21 @@ export default function Rsvp() {
       id="rsvp"
       className="p-8 flex flex-col items-center bg-gray-100 dark:bg-gray-900 cactus"
     >
-      <h1 className="text-4xl font-bold mb-0 josefin">RSVP</h1>
-      <p className="text-center">
+      <h3 className="text-[24px] pb-6">Saturday, April 12, 2025</h3>
+      <a href="https://www.theknot.com/us/riley-sklar-and-andie-goc-apr-2025/rsvp">
+        <div className="text-2xl font-bold mb-0 josefin bg-[var(--accent)] text-white px-6 py-4 pt-5 rounded-full">
+          Click to RSVP
+        </div>
+      </a>
+
+      {/* <p className="text-center">
         Please select your name, family, or party members who will be
         celebrating with us!
-      </p>
+      </p> */}
       {/* <p className="mb-6 text-2xl text-center">
         The Stakeout In Taos, New Mexico - April 12, 2025
       </p> */}
-      <form
+      {/* <form
         onSubmit={handleSubmit}
         className="w-full max-w-md text-[var(--black)] bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 shadow-lg rounded-xl px-8 pt-6 pb-8 mb-4"
       >
@@ -168,7 +174,7 @@ export default function Rsvp() {
           Submit
         </button>
         {message && <p className="mt-4 text-center">{message}</p>}
-      </form>
+      </form> */}
     </div>
   );
 }

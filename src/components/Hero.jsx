@@ -14,9 +14,9 @@ export default function Hero() {
         className="flex flex-col items-center align-center justify-center gap-4"
         href="#rsvp"
       >
-        <button class="text-[#fff6e4] bg-black pt-2 pb-1 px-4 mb-0 rounded-full text-2xl text-center drop-shadow-md">
+        {/* <button class="text-[#fff6e4] bg-black pt-2 pb-1 px-4 mb-0 rounded-full text-2xl text-center drop-shadow-md">
           April 12, 2025
-        </button>
+        </button> */}
         <Countdown />
       </a>
     </div>
