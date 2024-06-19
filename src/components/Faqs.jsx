@@ -5,11 +5,28 @@ export default function Faq(theme) {
     {
       question: "Where should we go to celebrate?",
       answer:
-        "Our venue, The Stakeout, is located at 101 Stake Out Dr, Ranchos De Taos, NM 87557. More information will be shared regarding transportation to the venue.",
+        "Our venue, The Stakeout, is located at 101 Stake Out Dr, Ranchos De Taos, NM 87557. More information coming soon regarding transportation to the venue.",
     },
     {
+      question: "Where should we go to celebrate?",
+      answer: (
+        <>
+          "Our venue, The Stakeout, is located at 101 Stake Out Dr, Ranchos De
+          Taos, NM 87557. More information regarding{" "}
+          <a
+            className="underline bg-white text-black py-2 rounded-full px-3"
+            href="../blog/transportation"
+          >
+            transportation
+          </a>{" "}
+          coming soon.
+        </>
+      ),
+    },
+
+    {
       question: "What time should I arrive to the ceremony?",
-      answer: "TBD",
+      answer: "Coming Soon",
     },
     {
       question: "What time does the party end?",
@@ -17,8 +34,18 @@ export default function Faq(theme) {
     },
     {
       question: "What’s the vibe for attire?",
-      answer:
-        "We want you to feel glamorous while celebrating with us in the high desert. Imagine yourself stepping into a modern-day '60s or '70s disco, but the disco sits atop Outlaw Hill in Taos, NM. The dress code is formal with colors and textures that radiate elegance and fun. We encourage bold, vibrant colors and bright jewel tones to capture the magic of the evening. Picture yourself in your favorite winter coat, perhaps a fur gem that’s been tucked away in your closet. Feathers and velvet are most certainly welcomed to enhance the festive, retro vibe. Dress to impress and get ready to dance the night away under the desert stars! Looking for inspiration? INSERT PINTREST LINK",
+      answer: (
+        <>
+          Thank you for inquiring! Check out our{" "}
+          <a
+            className="underline bg-white text-black py-2 rounded-full px-3"
+            href="../blog/outfit"
+          >
+            blog
+          </a>{" "}
+          for details and inspiration.
+        </>
+      ),
     },
     {
       question: "Will the wedding be outdoors?",
@@ -34,6 +61,11 @@ export default function Faq(theme) {
       question: "Can I bring a plus-one?",
       answer:
         "We unfortunately cannot accommodate additional guests. Due to limited capacity, we can only allow the people named on your invitation. Your invitation will be made out to “{Your Name} & Guest” if a plus one has been given to you.",
+    },
+    {
+      question: "What should I bring?",
+      answer:
+        "A coat for the evening, and comfortable shoes for dancing. Andie is a stationary enthusiast. A card for the bride and groom would be greatly appreciated. We would also recommend bringing some cash to tip the bartenders.",
     },
     {
       question: "Are children welcome?",

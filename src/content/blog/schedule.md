@@ -5,6 +5,6 @@ pubDate: "May 07 2024"
 heroImage: "/flowers.jpg"
 ---
 
-## Schedule of events
+## Coming Soon
 
 <!-- hello -->

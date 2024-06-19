@@ -5,4 +5,4 @@ pubDate: "May 07 2024"
 heroImage: "/tico.jpg"
 ---
 
-## Tico is a dog
+Tico is a dog. He is an 8 year old standard poodle and he is a good boy. He has no job and he is still trying to learn how to read.
