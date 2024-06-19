@@ -20,6 +20,7 @@ html {
   --accent: #fab2ea;
   --black: #1f1d24;
   --white: #fff6e4;
+  scroll-behavior: smooth;
 }
 
 html.dark {
