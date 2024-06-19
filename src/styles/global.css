@@ -10,7 +10,7 @@
   --gray-light: 251, 251, 242;
   --gray-dark: 40, 38, 44;
   --gray-gradient: rgba(var(--gray-light), 50%), #fff;
-  --box-shadow: 0 2px 6px rgba(var(--gray), 25%),
+  --box-shadow: 0 1px 6px rgba(88, 88, 88, 0.15),
     0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
 }
 
@@ -290,4 +290,46 @@ hr {
   to {
     opacity: 0%;
   }
+}
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: 1fr; /* default to 1 column for mobile */
+  gap: 1rem;
+}
+
+/* This media query applies when the screen width is 768px or more (typical breakpoint for tablets and desktops) */
+@media (min-width: 768px) {
+  .photo-gallery {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+  }
+
+  .photo-gallery img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: var(--box-shadow);
+  }
+
+  .photo-gallery img.selected {
+    transform: scale(1.3);
+    box-shadow: var(--box-shadow);
+  }
+}
+
+.photo-gallery img {
+  width: 100%;
+  height: 200px; /* adjust this value as needed */
+  object-fit: cover; /* this will ensure that the image covers the full area of the container without distorting its aspect ratio */
+  transition: transform 0.3s ease-in-out;
+}
+
+.photo-gallery img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: var(--box-shadow);
+}
+
+.photo-gallery img.selected {
+  transform: scale(1.3);
+  box-shadow: var(--box-shadow);
 }

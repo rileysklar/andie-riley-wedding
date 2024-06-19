@@ -102,7 +102,17 @@ export default function Faq(theme) {
     },
     {
       question: "Do you have a registry?",
-      answer: "We do! You can find our registry here – INSERT LINK",
+      answer: (
+        <>
+          We do! You can find our registry{" "}
+          <a
+            className="underline bg-white text-black py-2 rounded-full px-3"
+            href="  https://www.zola.com/registry/rileyandandie"
+          >
+            here.
+          </a>{" "}
+        </>
+      ),
     },
     {
       question: "What should I do and see in New Mexico?",
