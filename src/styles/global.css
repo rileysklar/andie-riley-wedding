@@ -42,7 +42,7 @@ html.dark {
       rgba(28, 28, 28, 0.579) 98%
     ),
     url("/hero.png");
-  background-position: top center;
+  background-position: center 24%;
   /* background-attachment: fixed; */
   background-repeat: no-repeat;
   background-size: cover;
