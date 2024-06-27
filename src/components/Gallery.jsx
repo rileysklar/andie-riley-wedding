@@ -4,9 +4,9 @@ import "../styles/global.css";
 const PhotoGallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const images = Array(38)
+  const images = Array(39)
     .fill(null)
-    .map((_, i) => `/photos/p-${i + 1}.jpg`);
+    .map((_, i) => `/photos/p-${i}.jpg`);
 
   return (
     <div className="photo-gallery">
@@ -17,6 +17,7 @@ const PhotoGallery = () => {
           alt={`Gallery Image ${i + 1}`}
           onClick={() => setSelectedImage(src)}
           className={selectedImage === src ? "selected" : ""}
+          loading="lazy"
         />
       ))}
     </div>
