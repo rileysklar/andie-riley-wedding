@@ -15,13 +15,13 @@ Here are some of the best things to see and do in New Mexico:
 
 #### Santa Fe
 
-<img src="../../../public/sf.jpg" class="py-8">
+<img src="/sf.jpg" class="py-8">
 
 The capital city and a cultural hub of New Mexico. Admire the historic adobe buildings, visit the museums and galleries, shop at the local markets, and taste the authentic cuisine.
 
 #### Meow Wolf
 
-<img src="../../../public/meow.jpg" class="py-8">
+<img src="/meow.jpg" class="py-8">
 
 Experience Meow Wolf in Santa Fe, an immersive and interactive art installation that features a multidimensional mystery house, a psychedelic forest, and a futuristic spaceship. You can explore the different rooms, touch the objects, and discover the secrets.
 
@@ -32,7 +32,8 @@ Andie’s favorite spot is connected to a gift shop and pharmacy in Albuquerque.
 
 #### Rio Grande Gorge Bridge
 
-<img src="../../../public/bridge.webp" class="py-8">
+<img src="/bridge.webp
+" class="py-8">
 
 The 5th highest bridge in the US, with a height of 565 feet above the Rio Grande. Visit the bridge outside of Taos to experience breathtaking views of the gorge and landscape.
 
