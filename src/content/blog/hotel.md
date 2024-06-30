@@ -1,7 +1,7 @@
 ---
-title: "Hotel & Travel"
+title: "Hotels"
 description: "Explore our curated list of hotel options for our special day in Taos. Each offers unique amenities and has been carefully selected to accommodate our guests with comfort and convenience."
-pubDate: "May 07 2024"
+pubDate: "June 30 2024"
 heroImage: "/hotel.jpg"
 ---
 

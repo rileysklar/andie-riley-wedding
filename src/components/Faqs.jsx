@@ -4,11 +4,6 @@ export default function Faq(theme) {
   const faqData = [
     {
       question: "Where should we go to celebrate?",
-      answer:
-        "Our venue, The Stakeout, is located at 101 Stake Out Dr, Ranchos De Taos, NM 87557. More information coming soon regarding transportation to the venue.",
-    },
-    {
-      question: "Where should we go to celebrate?",
       answer: (
         <>
           "Our venue, The Stakeout, is located at 101 Stake Out Dr, Ranchos De
@@ -60,7 +55,7 @@ export default function Faq(theme) {
     {
       question: "Can I bring a plus-one?",
       answer:
-        "We unfortunately cannot accommodate additional guests. Due to limited capacity, we can only allow the people named on your invitation. Your invitation will be made out to “{Your Name} & Guest” if a plus one has been given to you.",
+        "We unfortunately cannot accommodate additional guests. Due to limited capacity, we can only allow the people named on your invitation.",
     },
     {
       question: "What should I bring?",
@@ -70,12 +65,28 @@ export default function Faq(theme) {
     {
       question: "Are children welcome?",
       answer:
-        "YES! Your children are more than welcome! Please note, they are strongly discouraged if they will require you to leave the dancefloor earlier than 10pm. Children should also follow the described dress code. They will look back on their outfit with pride! Your invitation will be made out to “The {Your Last Name} Family” referencing your children have been invited.",
+        "YES! Your children are more than welcome! Please note, they are strongly discouraged if they will require you to leave the dancefloor earlier than 10pm. Children should also follow the described dress code. They will look back on their outfit with pride!",
     },
     {
       question: "What should I do if I can’t make it?",
       answer:
         "You will be missed! If you cannot make it, please let us know as soon as possible by RSVP-ing “no” so we can plan accordingly.",
+    },
+    {
+      question: "What should I do if I can’t make it?",
+      answer: (
+        <>
+          You will be missed! If you cannot make it, please let us know as soon
+          as possible by{" "}
+          <a
+            className="underline bg-white text-black py-2 rounded-full px-3"
+            href="https://www.theknot.com/us/riley-sklar-and-andie-goc-apr-2025/rsvp"
+          >
+            RSVP-ing “Decline”
+          </a>{" "}
+          so we can plan accordingly.
+        </>
+      ),
     },
     {
       question: "What if I do not RSVP in time?",
@@ -90,11 +101,11 @@ export default function Faq(theme) {
       question: "Is there transportation to and from the venue?",
       answer: "Coming Soon",
     },
-    {
-      question: "What’s the menu?",
-      answer:
-        "The chef at The Stakeout is from the south. We are drawing inspiration from her experience and have decided on a southern focused menu. There will be meat, gumbo, veggie options and bread!!!",
-    },
+    // {
+    //   question: "What’s on the menu?",
+    //   answer:
+    //     "The chef at The Stakeout is from the south. We are drawing inspiration from her experience and have decided on a southern focused menu. There will be meat, gumbo, veggie options and bread!",
+    // },
     {
       question: "I have a dietary restriction, what should I do?",
       answer:
@@ -116,7 +127,17 @@ export default function Faq(theme) {
     },
     {
       question: "What should I do and see in New Mexico?",
-      answer: "Coming Soon",
+      answer: (
+        <>
+          Check out our{" "}
+          <a
+            className="underline bg-white text-black py-2 rounded-full px-3"
+            href="/blog/to-do/"
+          >
+            blog.
+          </a>{" "}
+        </>
+      ),
     },
   ];
 
