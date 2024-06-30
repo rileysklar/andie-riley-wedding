@@ -5,6 +5,8 @@ pubDate: "June 30 2024"
 heroImage: "/taos.jpg"
 ---
 
+<div class="blog">
+
 ### Discover the Land of Enchantment
 
 New Mexico is known for its diverse culture, natural beauty, and rich history. Whether you are looking for outdoor adventures, artistic experiences, or historical sites, New Mexico has something for everyone. If you have time to road trip throughout this gorgeous state, we highly recommend it!
@@ -13,9 +15,13 @@ Here are some of the best things to see and do in New Mexico:
 
 #### Santa Fe
 
+<img src="../../../public/sf.jpg" class="py-8">
+
 The capital city and a cultural hub of New Mexico. Admire the historic adobe buildings, visit the museums and galleries, shop at the local markets, and taste the authentic cuisine.
 
 #### Meow Wolf
+
+<img src="../../../public/meow.jpg" class="py-8">
 
 Experience Meow Wolf in Santa Fe, an immersive and interactive art installation that features a multidimensional mystery house, a psychedelic forest, and a futuristic spaceship. You can explore the different rooms, touch the objects, and discover the secrets.
 
@@ -25,6 +31,8 @@ Andie’s favorite spot is connected to a gift shop and pharmacy in Albuquerque.
 -- [Duran Central Pharmacy](https://duransrx.com/)
 
 #### Rio Grande Gorge Bridge
+
+<img src="../../../public/bridge.webp" class="py-8">
 
 The 5th highest bridge in the US, with a height of 565 feet above the Rio Grande. Visit the bridge outside of Taos to experience breathtaking views of the gorge and landscape.
 
@@ -71,3 +79,10 @@ Located 5 hours south of Albuquerque, explore a network of more than 100 caves t
 #### Chaco Culture National Historical Park
 
 Located 3 hours outside of Santa Fe/Albuquerque, it is an UNESCO World Heritage Site and one of the largest and most complex prehistoric archaeological sites in North America. You can see the remains of the great houses, kivas, and roads that were built by the Chacoans between 850 and 1250 AD.
+
+</div>
+<style>
+.blog a {
+    text-decoration: underline;
+  }
+</style>

@@ -34,6 +34,12 @@ const TopNav = () => {
           </a>
           <a
             className="hover:border-b-2 border-b-2 border-transparent hover:border-black"
+            href="/blog/photo"
+          >
+            Gallery
+          </a>
+          <a
+            className="hover:border-b-2 border-b-2 border-transparent hover:border-black"
             href="https://www.zola.com/registry/rileyandandie"
           >
             Registry
@@ -53,13 +59,14 @@ const TopNav = () => {
       </nav>
       {isMenuOpen && (
         <div
-          className="mobile-menu z-10 absolute bg-[var(--white)] py-12 flex flex-col align-center items-center gap-8 text-2xl rounded-b-lg
+          className="mobile-menu z-10 absolute bg-[var(--white)] shadow-lg py-12 flex flex-col align-center items-center gap-8 text-2xl rounded-b-lg
 
          w-full h-auto"
         >
           <a href="/">Home</a>
           <a href="/blog">Info</a>
           <a href="/about">Love Story</a>
+          <a href="/blog/photo">Gallery</a>
           <a href="https://www.zola.com/registry/rileyandandie">Registry</a>
         </div>
       )}

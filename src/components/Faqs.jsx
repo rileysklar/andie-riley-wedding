@@ -6,7 +6,7 @@ export default function Faq(theme) {
       question: "Where should we go to celebrate?",
       answer: (
         <>
-          "Our venue, The Stakeout, is located at 101 Stake Out Dr, Ranchos De
+          Our venue, The Stakeout, is located at 101 Stake Out Dr, Ranchos De
           Taos, NM 87557. More information regarding{" "}
           <a
             className="underline bg-white text-black py-2 rounded-full px-3"
@@ -50,7 +50,7 @@ export default function Faq(theme) {
     {
       question: "How chilly will it get?",
       answer:
-        "Taos is located in northern New Mexico, 13,000 feet above sea level. April weather starts to turn towards spring. You can expect the sun to be very strong during the day (65-70). The temperatures drop dramatically in the evening (35-40). Please plan your attire accordingly. We recommend a very warm coat! If you are cold, please consider joining us on the dance floor.",
+        "Taos is located in northern New Mexico, 7,000 feet above sea level. April weather starts to turn towards spring. You can expect the sun to be very strong during the day (65-70). The temperatures drop dramatically in the evening (35-40). Please plan your attire accordingly. We recommend a very warm coat! If you are cold, please consider joining us on the dance floor.",
     },
     {
       question: "Can I bring a plus-one?",
@@ -68,10 +68,11 @@ export default function Faq(theme) {
         "YES! Your children are more than welcome! Please note, they are strongly discouraged if they will require you to leave the dancefloor earlier than 10pm. Children should also follow the described dress code. They will look back on their outfit with pride!",
     },
     {
-      question: "What should I do if I can’t make it?",
+      question: "Is there Uber or Lyft?",
       answer:
-        "You will be missed! If you cannot make it, please let us know as soon as possible by RSVP-ing “no” so we can plan accordingly.",
+        "No, ride share is not available in Taos. We recommend renting a car or carpooling with other guests. More information regarding transportation coming soon.",
     },
+
     {
       question: "What should I do if I can’t make it?",
       answer: (
@@ -91,7 +92,7 @@ export default function Faq(theme) {
     {
       question: "What if I do not RSVP in time?",
       answer:
-        "We will miss celebrating with you! We require you and any additional invited guests to RSVP by January 15th, 2025. Any RSVPs received after this date will be marked as “no” so please don’t RSVP late!",
+        "We will miss celebrating with you! We require you and any additional invited guests to RSVP by February 15th, 2025. Any RSVPs received after this date will be marked as “no” so please don’t RSVP late!",
     },
     {
       question: "Is there parking available?",
