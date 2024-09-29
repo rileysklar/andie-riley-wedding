@@ -44,7 +44,7 @@ html.dark {
     url("/hero.png"); */
   background-image: url("bridge.jpg");
   background-position: center 24%;
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
