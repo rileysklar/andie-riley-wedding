@@ -36,12 +36,13 @@ html.dark {
 }
 
 .hero-gradient {
-  background: linear-gradient(
+  /* background: linear-gradient(
       180deg,
       rgba(6, 6, 6, 0.3) 3%,
       rgba(28, 28, 28, 0.579) 98%
     ),
-    url("/hero.png");
+    url("/hero.png"); */
+  background-image: url("bridge.jpg");
   background-position: center 24%;
   /* background-attachment: fixed; */
   background-repeat: no-repeat;

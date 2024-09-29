@@ -11,7 +11,7 @@ const TopNav = () => {
           <a className="" href="/">
             <h1 className="mb-0 text-xl beth"> Andie & Riley </h1>
           </a>
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
         </div>
         <div className="sm:flex flex-row hidden gap-4 ">
           <a

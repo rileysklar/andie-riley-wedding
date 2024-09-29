@@ -13,7 +13,7 @@ const Countdown = () => {
 
   function calculateTimeLeft() {
     let year = new Date().getFullYear();
-    const difference = +new Date(`2025-04-12`) - +new Date();
+    const difference = +new Date(`2025-05-04`) - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {
