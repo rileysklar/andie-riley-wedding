@@ -3,7 +3,7 @@
 }
 
 :root {
-  --accent: #a14a76;
+  --accent: #40e0d0;
   --accent-dark: #fab2ea;
   --black: 40, 38, 44;
   --gray: 183, 200, 181;
@@ -15,24 +15,24 @@
 }
 
 html {
-  background-color: #fff6e4;
+  background-color: #ffffff;
   color: #28262c;
   --accent: #fab2ea;
   --black: #1f1d24;
-  --white: #fff6e4;
+  --white: #ffffff;
   scroll-behavior: smooth;
 }
 
 html.dark {
   background-color: #272232;
-  color: #fbfbf2;
+  color: #ffffff;
   --accent: #93a391;
   --white: #28262c;
-  --black: #fff6e4;
+  --black: hsl(0, 0%, 100%);
 }
 
 .dark .nav-links a {
-  color: #fbfbf2;
+  color: #ffffff;
 }
 
 .hero-gradient {

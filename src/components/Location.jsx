@@ -1,6 +1,9 @@
 export default function Location() {
   return (
-    <div className="cactus  bg-fixed p-8  bg-no-repeat justify-center bg-cover bg-center flex flex-col items-center">
+    <div
+      id="location"
+      className="cactus  bg-fixed p-8  bg-no-repeat justify-center bg-cover bg-center flex flex-col items-center"
+    >
       <div className="flex flex-col flex-wrap gap-4 items-center justify-center align-center">
         <h3 className="text-center ">Ivy Hall</h3>
         <img
@@ -19,7 +22,7 @@ export default function Location() {
 
           {/* <p className="text-center">April 12, 2025</p> */}
           <a href="https://www.theknot.com/us/riley-sklar-and-andie-goc-apr-2025/rsvp">
-            <div className=" josefin text-white shadow-2xl my-button mx-auto h-16 w-64 mt-4 pt-[4px] flex justify-center items-center rounded-lg cursor-pointer relative overflow-hidden">
+            <div className=" josefin text-black shadow-2xl my-button mx-auto h-16 w-64 mt-4 pt-[4px] flex justify-center items-center rounded-lg cursor-pointer relative overflow-hidden">
               Click to RSVP
             </div>
           </a>
