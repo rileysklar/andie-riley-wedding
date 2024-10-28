@@ -3,7 +3,7 @@
 }
 
 :root {
-  --accent: #40e0d0;
+  --accent: #4698b0;
   --accent-dark: #fab2ea;
   --black: 40, 38, 44;
   --gray: 183, 200, 181;
@@ -42,9 +42,9 @@ html.dark {
       rgba(28, 28, 28, 0.579) 98%
     ),
     url("/hero.png"); */
-  background-image: url("bridge.jpg");
+  background-image: url("kiss.jpg");
   background-position: center 24%;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -64,23 +64,7 @@ html.dark {
   bottom: 0;
   right: 0;
   position: absolute;
-  z-index: -1;
-}
-
-@font-face {
-  font-family: "Beth";
-  src: url("/fonts/BethEllen-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Epilogue";
-  src: url("/fonts/Epilogue-VariableFont_wght.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+  z-index: ;
 }
 
 .cactus {
@@ -89,24 +73,8 @@ html.dark {
   background-repeat: repeat;
 }
 
-@font-face {
-  font-family: "Josefin";
-  src: url("/fonts/JosefinSans-VariableFont_wght.ttf") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-.josefin {
-  font-family: "Josefin", sans-serif;
-}
-
-.beth {
-  font-family: "Beth";
-}
-
 body {
-  font-family: "Josefin", sans-serif;
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
   text-align: left;
@@ -136,7 +104,7 @@ h1 {
 }
 h2 {
   font-size: 2.441em;
-  font-family: "Josefin", sans-serif;
+  font-family: sans-serif;
 }
 h3 {
   font-size: 1.953em;

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import "./Faqs.css"; // Make sure to create this CSS file for the animations
 
 export default function Faq(theme) {
   const faqData = [
@@ -6,111 +8,108 @@ export default function Faq(theme) {
       question: "Where should we go to celebrate?",
       answer: (
         <>
-          Our venue, The Stakeout, is located at 101 Stake Out Dr, Ranchos De
-          Taos, NM 87557. More information regarding{" "}
-          <a
-            className="underline bg-white text-black py-2 rounded-full px-3"
-            href="../blog/transportation"
-          >
-            transportation
-          </a>{" "}
-          coming soon.
+          Our venue, Ivy Hall, is located at 1127 S St Mary's St, San Antonio,
+          TX 78210.
         </>
       ),
     },
 
     {
       question: "What time should I arrive to the ceremony?",
-      answer: "Coming Soon",
-    },
-    {
-      question: "What time does the party end?",
-      answer: "All guests are required to be off the property by midnight.",
+      answer: "TBD",
     },
     {
       question: "What’s the vibe for attire?",
       answer: (
         <>
-          Thank you for inquiring! Check out our{" "}
+          We want you to feel glamorous while celebrating with us. Imagine
+          yourself stepping into a modern-day hacienda adorned with disco balls,
+          lanterns, bright florals, and eclectic dance music. The dress code is
+          cocktail formal with colors and textures that radiate fun and your
+          individual style. We encourage bold, vibrant colors and bright jewel
+          tones to capture the magic of the evening. Feathers and velvet are
+          most certainly welcomed to enhance the festive, party vibe. Dress to
+          impress and get ready to dance the night away in the Lone Star State!
+          Looking for inspiration? Check out our{" "}
           <a
             className="underline bg-white text-black py-2 rounded-full px-3"
-            href="../blog/outfit"
+            href="#"
           >
-            blog
-          </a>{" "}
-          for details and inspiration.
+            Pinterest link
+          </a>
+          .
         </>
       ),
     },
     {
       question: "Will the wedding be outdoors?",
-      answer:
-        "Yes, the ceremony will take place outdoors. The reception location has indoor and outdoor spaces, with most of the evening taking place indoors. Please keep this in mind when selecting your attire for the event.",
+      answer: "Yes, the ceremony and reception will take place outdoors.",
     },
     {
-      question: "How chilly will it get?",
-      answer:
-        "Taos is located in northern New Mexico, 7,000 feet above sea level. April weather starts to turn towards spring. You can expect the sun to be very strong during the day (65-70). The temperatures drop dramatically in the evening (35-40). Please plan your attire accordingly. We recommend a very warm coat! If you are cold, please consider joining us on the dance floor.",
+      question: "What will the weather be like?",
+      answer: "Coming Soon",
     },
     {
       question: "Can I bring a plus-one?",
-      answer:
-        "We unfortunately cannot accommodate additional guests. Due to limited capacity, we can only allow the people named on your invitation.",
-    },
-    {
-      question: "What should I bring?",
-      answer:
-        "A coat for the evening, and comfortable shoes for dancing. Andie is a stationary enthusiast. A card for the bride and groom would be greatly appreciated. We would also recommend bringing some cash to tip the bartenders.",
+      answer: (
+        <>
+          We unfortunately cannot accommodate additional guests. Due to limited
+          capacity, we can only allow the people named on your invitation. Your
+          invitation will be made out to “You & Guest” if a plus one has been
+          given to you.
+        </>
+      ),
     },
     {
       question: "Are children welcome?",
-      answer:
-        "YES! Your children are more than welcome! Please note, they are strongly discouraged if they will require you to leave the dancefloor earlier than 10pm. Children should also follow the described dress code. They will look back on their outfit with pride!",
+      answer: (
+        <>
+          YES! Your children are more than welcome! Please note, they are
+          strongly discouraged if they will require you to leave the dancefloor
+          earlier than 10pm. Children should also follow the described dress
+          code. Your invitation will be made out to “The Family” referencing
+          your children have been invited.
+        </>
+      ),
     },
-    {
-      question: "Is there Uber or Lyft?",
-      answer:
-        "No, ride share is not available in Taos. We recommend renting a car or carpooling with other guests. More information regarding transportation coming soon.",
-    },
-
     {
       question: "What should I do if I can’t make it?",
       answer: (
         <>
           You will be missed! If you cannot make it, please let us know as soon
-          as possible by{" "}
-          <a
-            className="underline bg-white text-black py-2 rounded-full px-3"
-            href="https://www.theknot.com/us/riley-sklar-and-andie-goc-apr-2025/rsvp"
-          >
-            RSVP-ing “Decline”
-          </a>{" "}
-          so we can plan accordingly.
+          as possible by RSVP-ing “no” so we can plan accordingly.
         </>
       ),
     },
     {
       question: "What if I do not RSVP in time?",
-      answer:
-        "We will miss celebrating with you! We require you and any additional invited guests to RSVP by February 15th, 2025. Any RSVPs received after this date will be marked as “no” so please don’t RSVP late!",
+      answer: (
+        <>
+          We will miss celebrating with you! We require you and any additional
+          invited guests to RSVP by March 15th, 2025. Any RSVPs received after
+          this date will be marked as “no” so please don’t RSVP late!
+        </>
+      ),
     },
     {
       question: "Is there parking available?",
-      answer: "Yes, parking is available on-site at the venue.",
+      answer:
+        "There is ample street parking outside of the venue. There is no parking on-site.",
     },
     {
       question: "Is there transportation to and from the venue?",
-      answer: "Coming Soon",
+      answer:
+        "We will not be providing transportation and encourage you to use Lyft or Uber.",
     },
-    // {
-    //   question: "What’s on the menu?",
-    //   answer:
-    //     "The chef at The Stakeout is from the south. We are drawing inspiration from her experience and have decided on a southern focused menu. There will be meat, gumbo, veggie options and bread!",
-    // },
     {
       question: "I have a dietary restriction, what should I do?",
-      answer:
-        "There will be food options for vegetarian and gluten free diets. Please reach out to Andie or Riley to share any additional dietary restrictions so we can plan accordingly.",
+      answer: (
+        <>
+          There will be food options for vegetarian and gluten-free diets.
+          Please reach out to Andie or Riley to share any additional dietary
+          restrictions so we can plan accordingly.
+        </>
+      ),
     },
     {
       question: "Do you have a registry?",
@@ -119,43 +118,36 @@ export default function Faq(theme) {
           We do! You can find our registry{" "}
           <a
             className="underline bg-white text-black py-2 rounded-full px-3"
-            href="  https://www.zola.com/registry/rileyandandie"
+            href="#"
           >
             here.
-          </a>{" "}
-        </>
-      ),
-    },
-    {
-      question: "What should I do and see in New Mexico?",
-      answer: (
-        <>
-          Check out our{" "}
-          <a
-            className="underline bg-white text-black py-2 rounded-full px-3"
-            href="/blog/to-do/"
-          >
-            blog.
-          </a>{" "}
+          </a>
         </>
       ),
     },
   ];
 
   const AccordionItem = ({ question, answer, isOpen, onClick }) => (
-    <div className=" border-b border-gray-200">
+    <div className="border-b border-gray-200">
       <button
         className="w-full flex flex-row justify-between text-left py-3 px-4 cursor-pointer focus:outline-none"
         onClick={onClick}
       >
         {question}
-        <div className="">{isOpen ? "-" : "+"}</div>
+        <div>{isOpen ? "-" : "+"}</div>
       </button>
-      {isOpen && (
-        <p className="p-4 mb-4 bg-[var(--accent)] text-white rounded-lg ">
-          {answer}
-        </p>
-      )}
+      <CSSTransition
+        in={isOpen}
+        timeout={200}
+        classNames="accordion"
+        unmountOnExit
+      >
+        <div>
+          <p className="p-4 mb-4 bg-[var(--accent)] text-white rounded-lg">
+            {answer}
+          </p>
+        </div>
+      </CSSTransition>
     </div>
   );
 
@@ -180,11 +172,11 @@ export default function Faq(theme) {
   return (
     <div className="flex flex-col justify-between p-8">
       <div className="p-8 w-full flex flex-row items-center justify-center rounded-full align-center">
-        <img
+        {/* <img
           src="/logo-wht.svg"
           alt="Taos, New Mexico"
           className="max-w-[400px] p-4 w-full h-auto"
-        />
+        /> */}
       </div>
       <Accordion items={faqData} />
       <div className="flex flex-col items-center align-center justify-end"></div>

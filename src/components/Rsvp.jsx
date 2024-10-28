@@ -90,7 +90,7 @@ export default function Rsvp() {
     >
       <h3 className="text-[24px] pb-6">Saturday, April 12, 2025</h3>
       <a href="https://www.theknot.com/us/riley-sklar-and-andie-goc-apr-2025/rsvp">
-        <div className="text-2xl font-bold mb-0 josefin bg-[var(--accent)] text-white px-6 py-4 pt-5 rounded-full">
+        <div className="text-2xl font-bold mb-0 bg-[var(--accent)] text-white px-6 py-4 pt-5 rounded-full">
           Click to RSVP
         </div>
       </a>

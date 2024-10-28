@@ -21,7 +21,7 @@ desert stars! Looking for inspiration?
 Visit the Pinterest mood board below for more inspriation.
 <a href="https://pin.it/7c0Dss2jr">
 
-<div className="mb-[42px] josefin text-white shadow-2xl my-button mx-auto h-16 w-64  pt-[4px] flex justify-center items-center rounded-lg cursor-pointer relative overflow-hidden">
+<div className="mb-[42px] text-white shadow-2xl my-button mx-auto h-16 w-64  pt-[4px] flex justify-center items-center rounded-lg cursor-pointer relative overflow-hidden">
 Pinterest Mood Board </div>
 
 ##### Spotted by Ashley
