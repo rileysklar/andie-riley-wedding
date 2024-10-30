@@ -23,6 +23,23 @@ html {
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: "Dream";
+  src: url("/fonts/Dream.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+nav {
+  background-color: #fff;
+  position: fixed;
+  z-index: 9999;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Classic drop shadow */
+  font-family: "Dream";
+}
+
 html.dark {
   background-color: #272232;
   color: #ffffff;
@@ -30,9 +47,17 @@ html.dark {
   --white: #28262c;
   --black: hsl(0, 0%, 100%);
 }
-
 .dark .nav-links a {
   color: #ffffff;
+}
+
+time {
+  display: none;
+}
+
+.mobile-menu {
+  margin-top: 72px;
+  position: fixed;
 }
 
 .hero-gradient {
@@ -74,7 +99,6 @@ html.dark {
 }
 
 body {
-  font-family: sans-serif;
   margin: 0;
   padding: 0;
   text-align: left;
@@ -83,6 +107,7 @@ body {
   overflow-wrap: break-word;
   font-size: 20px;
   line-height: 1.7;
+  font-family: "Dream";
 }
 main {
   width: 720px;
@@ -97,14 +122,12 @@ h4,
 h5,
 h6 {
   line-height: 1.2;
-  font-family: "Beth", sans-serif;
 }
 h1 {
-  font-size: 3.052em;
+  font-size: 2em;
 }
 h2 {
   font-size: 2.441em;
-  font-family: sans-serif;
 }
 h3 {
   font-size: 1.953em;

@@ -9,7 +9,9 @@ We’re so excited you’ll be joining us in San Antonio for our wedding. San An
 
 ---
 
-## Driving Distances
+<br>
+
+#### Driving
 
 - **Austin:** 79 miles | 75 minutes
 - **Houston:** 197 miles | 3 hours
@@ -18,10 +20,14 @@ We’re so excited you’ll be joining us in San Antonio for our wedding. San An
 
 ---
 
-## Flying
+<br>
 
-- **SAT (San Antonio International Airport)** and **AUS (Austin International Airport)**  
-  It takes roughly 1.5 hours to drive to San Antonio from Austin.
+#### Flying
+
+- **SAT (San Antonio International Airport):**
+  20 minutes from venue
+  or
+- **AUS (Austin International Airport):** roughly 1.5 hours to drive to San Antonio from Austin.
 
 <style>
     .blog h2 {

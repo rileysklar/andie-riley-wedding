@@ -5,11 +5,29 @@ import "./Faqs.css"; // Make sure to create this CSS file for the animations
 export default function Faq(theme) {
   const faqData = [
     {
+      question: "When do I need to RSVP by?",
+      answer: (
+        <>
+          We will miss celebrating with you! We require you and any additional
+          invited guests to RSVP by March 15th, 2025. Any RSVPs received after
+          this date will be marked as “no” so please don’t RSVP late!
+        </>
+      ),
+    },
+    {
       question: "Where should we go to celebrate?",
       answer: (
         <>
-          Our venue, Ivy Hall, is located at 1127 S St Mary's St, San Antonio,
-          TX 78210.
+          Our venue, Ivy Hall, is located at{" "}
+          <a
+            href="https://www.google.com/maps/place/Ivy+Hall/@29.4118099,-98.4885783,15z/data=!4m6!3m5!1s0x865c58a6688eafa7:0x97feaaf129b8e708!8m2!3d29.4118099!4d-98.4885783!16s%2Fg%2F11fx8hng6f?entry=ttu&g_ep=EgoyMDI0MTAyNy4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            className=" underline"
+          >
+            1127 S St Mary's St, San Antonio, TX 78210
+          </a>
+          .
         </>
       ),
     },
@@ -17,6 +35,23 @@ export default function Faq(theme) {
     {
       question: "What time should I arrive to the ceremony?",
       answer: "TBD",
+    },
+    {
+      question: "What is Fiesta?",
+      answer: (
+        <>
+          Fiesta San Antonio is a 10-day festival that celebrates the culture
+          and history of San Antonio, Texas.{" "}
+          <a
+            href="https://fiestasanantonio.org/about-fiesta-san-antonio/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className=" underline"
+          >
+            Learn more about Fiesta.
+          </a>
+        </>
+      ),
     },
     {
       question: "What’s the vibe for attire?",
@@ -33,9 +68,9 @@ export default function Faq(theme) {
           Looking for inspiration? Check out our{" "}
           <a
             className="underline bg-white text-black py-2 rounded-full px-3"
-            href="#"
+            href="/blog/outfit/"
           >
-            Pinterest link
+            Fashion Guide
           </a>
           .
         </>
@@ -44,10 +79,6 @@ export default function Faq(theme) {
     {
       question: "Will the wedding be outdoors?",
       answer: "Yes, the ceremony and reception will take place outdoors.",
-    },
-    {
-      question: "What will the weather be like?",
-      answer: "Coming Soon",
     },
     {
       question: "Can I bring a plus-one?",
@@ -82,24 +113,13 @@ export default function Faq(theme) {
       ),
     },
     {
-      question: "What if I do not RSVP in time?",
-      answer: (
-        <>
-          We will miss celebrating with you! We require you and any additional
-          invited guests to RSVP by March 15th, 2025. Any RSVPs received after
-          this date will be marked as “no” so please don’t RSVP late!
-        </>
-      ),
-    },
-    {
       question: "Is there parking available?",
       answer:
         "There is ample street parking outside of the venue. There is no parking on-site.",
     },
     {
-      question: "Is there transportation to and from the venue?",
-      answer:
-        "We will not be providing transportation and encourage you to use Lyft or Uber.",
+      question: "What is the best way to get to the venue?",
+      answer: "We encourage you to use Lyft or Uber.",
     },
     {
       question: "I have a dietary restriction, what should I do?",
@@ -118,7 +138,7 @@ export default function Faq(theme) {
           We do! You can find our registry{" "}
           <a
             className="underline bg-white text-black py-2 rounded-full px-3"
-            href="#"
+            href="https://www.zola.com/registry/rileyandandie"
           >
             here.
           </a>

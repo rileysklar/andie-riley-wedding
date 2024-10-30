@@ -55,9 +55,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
   <body>
     <!-- <Header /> -->
     <TopNav client:load />
-    <main class="w-full">
+    <main class="w-full ">
       <article>
-        <div class="hero-image">
+        <div class="hero-image mt-[80px]">
           {
             heroImage && (
               <img width={1020} height={510} src={heroImage} alt="" />

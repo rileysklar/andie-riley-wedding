@@ -13,40 +13,28 @@ heroImage: "/hotel.jpg"
 - 7 minutes from the venue
 - Price: ~$200/night
 
-## The Thompson
-
-- [Website](https://www.hyatt.com/thompson-hotels/satth-thompson-san-antonio)
-- 7 minutes from the venue
-- Price: ~$280/night
-
-## Fairmount
-
-- [Website](https://www.fairmountsa.com/)
-- 3 minutes from the venue (15 minutes walk)
-- Price: ~$315/night
-
 ## Hotel Contessa
 
 - [Website](https://www.thehotelcontessa.com/)
 - 4 minutes from the venue (20 minutes walk)
 - Price: ~$175/night
 
-## Hotel Valencia
-
-- [Website](https://www.hotelvalencia-riverwalk.com/)
-- 5 minutes drive from the venue
-- Price: ~$256/night
-
-## The St. Anthony
-
-- [Website](https://www.marriott.com/en-us/hotels/satlc-the-st-anthony-a-luxury-collection-hotel-san-antonio/overview/)
-- 5 minutes drive from the venue
-- Price: ~$280/night
-
 ## Kimpton Santo Hotel
 
 - [Website](https://santohotelsanantonio.com/)
 - 4 minutes drive or 15 minutes walk from the venue
+- Price: Room block coming soon
+
+## Plaza San Antonio
+
+- [Website](https://www.marriott.com/en-us/hotels/satkd-plaza-san-antonio-hotel-and-spa-autograph-collection/overview/)
+- 4 minutes drive or 15 minutes walk from the venue
+- Price: ~$270/night
+
+## Canopy San Antonio
+
+- [Website](https://www.hilton.com/en/hotels/satpypy-canopy-san-antonio-riverwalk/)
+- 4 minutes from the venue (20 minutes walk)
 - Price: ~$270/night
 
 </div>

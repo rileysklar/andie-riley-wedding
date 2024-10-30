@@ -1,22 +1,17 @@
 ---
-title: "Outfit Inspo"
+title: "Fashion"
 description: "Explore our curated list of hotel options for our special day in Taos. Each offers unique amenities and has been carefully selected to accommodate our guests with comfort and convenience."
 pubDate: "June 30 2024"
 heroImage: "/fashion.jpg"
 ---
 
-> Our wedding in the stunning Taos High Desert of New Mexico is set to be a vibrant celebration of color, creativity, and whimsy.
+Our wedding will take place in a stunning garden in San Antonio, promising a lively celebration filled with color, creativity, whimsy, and romance.
 
-We want you to feel glamorous while celebrating with us in the high
-desert. Imagine yourself stepping into a modern-day '60s or '70s
-disco, but the disco sits atop Outlaw Hill in Taos, NM. The dress code
-is formal with colors and textures that radiate elegance and fun. We
-encourage bold, vibrant colors and bright jewel tones to capture the
-magic of the evening. Picture yourself in your favorite winter coat,
-perhaps a fur gem that’s been tucked away in your closet. Feathers and
-velvet are most certainly welcomed to enhance the festive, retro vibe.
-Dress to impress and get ready to dance the night away under the
-desert stars! Looking for inspiration?
+We want you to feel glamorous while celebrating with us. Imagine yourself stepping into a modern-day hacienda adorned with disco balls, lanterns, bright florals, and eclectic dance music. The dress code is cocktail formal with colors and textures that radiate fun and your individual style.
+
+> We encourage bold, vibrant colors and bright jewel tones to capture the magic of the evening.
+
+Feathers and velvet are most certainly welcomed to enhance the festive, party vibe. Dress to impress and get ready to dance the night away in the Lone Star State! Looking for inspiration?
 
 Visit the Pinterest mood board below for more inspriation.
 <a href="https://pin.it/7c0Dss2jr">
