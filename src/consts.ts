@@ -3,4 +3,4 @@
 
 export const SITE_TITLE = "San Antone Sklars";
 export const SITE_DESCRIPTION =
-  "Riley & Andie are getting married in San Antonio, Texas on May 4<sup>th</sup>, 2025!";
+  "Riley & Andie are getting married in San Antonio, Texas on May 4th, 2025!";
