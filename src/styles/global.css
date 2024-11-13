@@ -37,7 +37,6 @@ nav {
   z-index: 9999;
   border-radius: 0 0 10px 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Classic drop shadow */
-  font-family: "Dream";
 }
 
 html.dark {
@@ -109,6 +108,11 @@ body {
   line-height: 1.7;
   font-family: "Dream";
 }
+
+body.high-contrast {
+  font-family: sans-serif;
+}
+
 main {
   width: 720px;
   max-width: calc(100% - 2em);
