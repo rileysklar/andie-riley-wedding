@@ -1,4 +1,5 @@
 import Countdown from "./Countdown";
+import { AIChatComponent } from './AIChatComponent';
 
 export default function Hero() {
   return (
@@ -32,6 +33,14 @@ export default function Hero() {
         </button> */}
         {/* <Countdown /> */}
       </a>
+
+      {/* AI Chat Component */}
+      <div className="w-full max-w-2xl mt-8">
+        <AIChatComponent 
+          maxMessages={50}
+          className="bg-opacity-75 backdrop-blur-md"
+        />
+      </div>
     </div>
   );
 }
