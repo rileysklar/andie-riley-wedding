@@ -1,7 +1,7 @@
 import Countdown from "./Countdown";
 import { AIChatComponent } from './AIChatComponent';
 
-export default function Hero() {
+export function Hero() {
   const handleSubmit = (e) => {
     e.preventDefault();
     e.stopPropagation();
