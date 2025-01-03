@@ -15,7 +15,7 @@ export function Hero() {
   };
 
   return (
-    <div className="hero-gradient text-[#f4f4f4] flex flex-col items-center bg-cover bg-top h-[80svh] p-4 sm:p-8 overflow-hidden">
+    <div className="hero-gradient text-[#f4f4f4] flex flex-col items-center bg-cover bg-top h-[90svh] p-4 sm:p-8 overflow-hidden">
       <h1 className="text-shadow-lg text-center text-5xl sm:text-6xl mb-4 mt-[6rem] drop-shadow-md font-bold">
         We're getting married!
       </h1>
