@@ -31,6 +31,7 @@ export const AIChatComponent: React.FC<ChatProps> = ({
   const [error, setError] = useState<string | null>(null);
   const [isExpanded, setIsExpanded] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const [openSourceIndex, setOpenSourceIndex] = useState<number | null>(null);
 
   // Fixed API configuration
   const BASE_API_URL = 'https://web-page-rag-api.fly.dev';
@@ -129,7 +130,7 @@ export const AIChatComponent: React.FC<ChatProps> = ({
       className={`flex flex-col w-full rounded-lg transition-all duration-300 ease-in-out ${className}`}
       style={{
         height: 'auto',
-        minHeight: isExpanded ? '400px' : 'auto',
+        minHeight: isExpanded ? 'auto' : 'auto',
         maxHeight: isExpanded ? '400px' : 'fit-content',
         background: "rgba(0, 0, 0, 0.4)",
         boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.17)",
@@ -159,7 +160,7 @@ export const AIChatComponent: React.FC<ChatProps> = ({
         </button>
       )}
 
-      <div className={`flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 ${!isExpanded ? 'max-h-[200px]' : ''}`} style={{ scrollBehavior: 'smooth' }}>
+      <div className={`flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 ${!isExpanded ? 'max-h-[100px]' : ''}`} style={{ scrollBehavior: 'smooth' }}>
         {messages.length === 0 && (
           <div className="text-center text-gray-300 italic text-sm sm:text-base">
             I am your AI wedding coordinator. Ask me anything about the wedding!
@@ -193,24 +194,62 @@ export const AIChatComponent: React.FC<ChatProps> = ({
             </div>
             
             {message.sources && (
-              <div className="mt-1 sm:mt-2 text-xs sm:text-sm text-gray-500">
-                <details className="cursor-pointer">
-                  <summary className="font-medium hover:text-blue-500">View Sources</summary>
-                  <ul className="mt-1 list-disc list-inside pl-2">
-                    {message.sources.map((source, idx) => (
-                      <li key={idx}>
-                        <a
-                          href={source.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-500 hover:underline"
-                        >
-                          {source.title || source.url}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </details>
+              <div className="mt-1 sm:mt-2 text-xs sm:text-sm text-gray-300">
+                <div 
+                  className="group cursor-pointer"
+                  onClick={() => setOpenSourceIndex(openSourceIndex === index ? null : index)}
+                >
+                  <div className="flex items-center gap-1 font-medium hover:text-blue-400 transition-colors">
+                    <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      className={`h-4 w-4 transition-transform ${openSourceIndex === index ? 'rotate-180' : ''}`}
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke="currentColor"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M19 9l-7 7-7-7" 
+                      />
+                    </svg>
+                    View Sources ({message.sources.length})
+                  </div>
+                  {openSourceIndex === index && (
+                    <div className="mt-2 pl-4 border-l-2 border-gray-600">
+                      <ul className="space-y-1">
+                        {message.sources.map((source, idx) => (
+                          <li key={idx} className="hover:text-blue-400">
+                            <a
+                              href={source.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-1 hover:underline"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                className="h-3 w-3" 
+                                fill="none" 
+                                viewBox="0 0 24 24" 
+                                stroke="currentColor"
+                              >
+                                <path 
+                                  strokeLinecap="round" 
+                                  strokeLinejoin="round" 
+                                  strokeWidth={2} 
+                                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" 
+                                />
+                              </svg>
+                              {source.title || source.url}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
               </div>
             )}
           </div>
@@ -218,7 +257,7 @@ export const AIChatComponent: React.FC<ChatProps> = ({
         
         {loading && (
           <div className="flex justify-center">
-            <div className="animate-pulse text-gray-500">Thinking...</div>
+            <div className="animate-pulse text-gray-500">Checking my notes...</div>
           </div>
         )}
 
@@ -270,7 +309,7 @@ export const AIChatComponent: React.FC<ChatProps> = ({
             onChange={(e) => setInput(e.target.value)}
             className="flex-1 p-2 text-sm sm:text-base border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-black/20 text-white placeholder-gray-300"
             disabled={loading}
-            placeholder={isExpanded ? "Ask a question..." : "Ask me anything about the wedding..."}
+            placeholder={isExpanded ? "Ask me anything about the wedding..." : "Ask me anything about the wedding..."}
           />
           <button
             type="submit"
@@ -279,7 +318,7 @@ export const AIChatComponent: React.FC<ChatProps> = ({
             aria-label={loading ? 'Sending message...' : 'Send message'}
             onClick={(e) => e.stopPropagation()}
           >
-            {loading ? 'Thinking...' : 'Send'}
+            {loading ? 'Thinking...' : '✨ Send'}
           </button>
         </div>
       </form>

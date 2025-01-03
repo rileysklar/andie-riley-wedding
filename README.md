@@ -1,68 +1,162 @@
-# Astro Starter Kit: Blog
+# Andie & Riley Wedding Website
 
-```sh
-npm create astro@latest -- --template blog
+A modern, responsive wedding website built with React and Astro, featuring an AI-powered wedding coordinator chatbot that can answer questions about the wedding using RAG (Retrieval Augmented Generation) technology.
+
+## 🌟 Features
+
+### Frontend
+- **Modern Stack**: Built with React, Astro, and TailwindCSS
+- **Responsive Design**: Mobile-first approach with fluid layouts
+- **AI Wedding Coordinator**: Interactive chatbot for wedding information
+- **Dynamic Components**: 
+  - Hero section with background animations
+  - AI Chat interface with expand/collapse functionality
+  - Smooth transitions and animations
+  - Mobile-optimized interactions
+
+### Backend (RAG API)
+- **FastAPI REST endpoints**:
+  - Health check endpoint
+  - RAG query endpoint for chat interactions
+- **Security**:
+  - API key authentication
+  - Rate limiting (20 requests/minute)
+  - CORS configuration
+- **RAG System**:
+  - Context-aware responses
+  - Source attribution
+  - Intelligent text processing
+
+## 🛠 Tech Stack
+
+### Frontend
+- React 18
+- Astro
+- TailwindCSS
+- TypeScript
+- Vite
+
+### Backend
+- FastAPI
+- OpenAI GPT-3.5
+- Pinecone Vector DB
+- Docker
+- Fly.io
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+- Python 3.8+ (for backend)
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/andie-riley-wedding.git
+cd andie-riley-wedding
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
+2. Install frontend dependencies:
+```bash
+npm install
+```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+3. Create a `.env` file:
+```env
+VITE_AI_API_URL=https://web-page-rag-api.fly.dev
+VITE_AI_API_KEY=your_api_key
+```
 
-![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+4. Start the development server:
+```bash
+npm run dev
+```
 
-Features:
+## 🏗 Project Structure
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-├── public/
+```
+andie-riley-wedding/
 ├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
+│   ├── components/           # React components
+│   │   ├── AIChatComponent/ # AI Chat interface
+│   │   ├── Hero/            # Hero section
+│   │   └── ...
+│   ├── styles/              # Global styles
+│   └── pages/              # Astro pages
+├── public/                 # Static assets
+└── package.json           # Project dependencies
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🤖 AI Chat Component
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+The website features an AI-powered chat interface that can answer questions about the wedding. Key features:
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+- Dynamic height adjustment
+- Mobile-responsive design
+- Smooth animations
+- Message history with timestamps
+- Source attribution for answers
+- Error handling and loading states
+- Rate limiting protection
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 📱 Mobile Optimization
 
-## 🧞 Commands
+- Responsive design for all screen sizes
+- Touch-friendly interactions
+- Optimized input handling
+- Prevent unwanted scrolling behaviors
+- Smooth animations and transitions
 
-All commands are run from the root of the project, from a terminal:
+## 🔒 Security
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- Environment variable management
+- API key authentication
+- Rate limiting
+- CORS protection
+- Secure data handling
 
-## 👀 Want to learn more?
+## 🚀 Deployment
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+The website is deployed using Netlify with the following configuration:
 
-## Credit
+1. Environment variables set in Netlify dashboard
+2. Build command: `npm run build`
+3. Publish directory: `dist`
+4. Node.js version: 18.x
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+## 📈 Project Progress
+
+### Completed Features
+- [x] Initial project setup
+- [x] Core frontend components
+- [x] AI Chat integration
+- [x] Mobile responsiveness
+- [x] API integration
+- [x] Security implementation
+- [x] Production deployment
+
+### Upcoming Features
+- [ ] Conversation history
+- [ ] Enhanced error handling
+- [ ] Analytics integration
+- [ ] Performance optimizations
+- [ ] Additional chat features
+- [ ] Expanded wedding information
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a pull request
+
+## 📄 License
+
+This project is private and not licensed for public use.
+
+## 👥 Credits
+
+Developed by [Your Team/Name]
