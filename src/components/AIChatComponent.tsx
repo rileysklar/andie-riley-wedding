@@ -160,7 +160,7 @@ export const AIChatComponent: React.FC<ChatProps> = ({
         </button>
       )}
 
-      <div className={`flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 ${!isExpanded ? 'max-h-[100px]' : ''}`} style={{ scrollBehavior: 'smooth' }}>
+      <div className={`flex-1 overflow-y-auto p-3 pb-12 sm:p-4 space-y-3 sm:space-y-4 ${!isExpanded ? 'max-h-[100px]' : ''}`} style={{ scrollBehavior: 'smooth' }}>
         {messages.length === 0 && (
           <div className="text-center text-gray-300 italic text-sm sm:text-base">
             I am your AI wedding coordinator. Ask me anything about the wedding!
