@@ -31,6 +31,14 @@ html {
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 nav {
   background-color: #fff;
   position: fixed;
@@ -88,7 +96,6 @@ time {
   bottom: 0;
   right: 0;
   position: absolute;
-  z-index: ;
 }
 
 .cactus {
@@ -106,11 +113,11 @@ body {
   overflow-wrap: break-word;
   font-size: 20px;
   line-height: 1.7;
-  font-family: "Dream";
+  font-family: "Montserrat";
 }
 
 body.high-contrast {
-  font-family: sans-serif;
+  font-family: "Montserrat";
 }
 
 main {
@@ -126,6 +133,7 @@ h4,
 h5,
 h6 {
   line-height: 1.2;
+  font-family: "Dream";
 }
 h1 {
   font-size: 2em;

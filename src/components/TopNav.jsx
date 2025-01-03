@@ -69,21 +69,7 @@ const TopNav = () => {
           <a href="https://www.zola.com/registry/rileyandandie">Registry</a>
         </div>
       )}
-      <button
-        className="fixed bottom-4 right-4 p-2 px-3 pt-2 pb-1   text-white rounded-full shadow-3xl"
-        onClick={toggleHighContrast}
-        title="Make the font high contrast"
-        style={{
-          background: "rgba(255, 255, 255, 0.15)",
-          boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.17)",
-          backdropFilter: "blur(4px)",
-          WebkitBackdropFilter: "blur(4px)",
-        }}
-      >
-        <span role="img" aria-label="Toggle Font">
-          🔠
-        </span>
-      </button>
+      
     </header>
   );
 };
