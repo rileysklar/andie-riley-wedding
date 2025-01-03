@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 interface Source {
   url: string;
@@ -16,27 +16,31 @@ interface ChatProps {
   apiKey?: string;
   maxMessages?: number;
   className?: string;
+  preventScroll?: boolean;
 }
 
 export const AIChatComponent: React.FC<ChatProps> = ({ 
   apiKey, 
   maxMessages = 50,
-  className = ''
+  className = '',
+  preventScroll = false
 }) => {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  const API_URL = import.meta.env.VITE_AI_API_URL;
-  const API_KEY = apiKey || import.meta.env.VITE_AI_API_KEY;
+  // Fixed API configuration
+  const BASE_API_URL = 'https://web-page-rag-api.fly.dev';
+  const TEST_API_KEY = 'test123';
 
   const sendMessage = async (message: string) => {
     try {
       setLoading(true);
       setError(null);
       
-      // Add user message with timestamp
       const userMessage: ChatMessage = {
         role: 'user',
         content: message,
@@ -45,15 +49,16 @@ export const AIChatComponent: React.FC<ChatProps> = ({
       
       setMessages(prev => {
         const newMessages = [...prev, userMessage];
-        // Maintain message limit
         return newMessages.slice(-maxMessages);
       });
+
+      const endpoint = `${BASE_API_URL}/api/rag/query`;
       
-      const response = await fetch(`${API_URL}/api/rag/query`, {
+      const response = await fetch(endpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-API-Key': API_KEY,
+          'X-API-Key': TEST_API_KEY,
         },
         body: JSON.stringify({ message }),
       });
@@ -90,15 +95,77 @@ export const AIChatComponent: React.FC<ChatProps> = ({
     }
   };
 
+  const toggleExpanded = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  const scrollToBottom = () => {
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'end',
+        inline: 'nearest'
+      });
+    }
+  };
+
+  useEffect(() => {
+    if (messages.length > 0) {
+      setTimeout(scrollToBottom, 100);
+    }
+  }, [messages]);
+
+  useEffect(() => {
+    setMessages([{
+      role: 'assistant',
+      content: 'Hi! I am Riley and Andie\'s AI Wedding coordinator. Ask me anything about the wedding!',
+      timestamp: new Date()
+    }]);
+    setIsExpanded(false);
+  }, []);
+
   return (
-    <div className={`flex flex-col h-[400px] w-full max-w-2xl mx-auto rounded-lg ${className}`}
-         style={{
-           background: "rgba(0, 0, 0, 0.25)",
-           boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.17)",
-           backdropFilter: "blur(4px)",
-           WebkitBackdropFilter: "blur(4px)",
-         }}>
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+    <div 
+      className={`flex flex-col w-full rounded-lg transition-all duration-300 ease-in-out ${className}`}
+      style={{
+        height: 'auto',
+        minHeight: isExpanded ? '400px' : 'auto',
+        maxHeight: isExpanded ? '400px' : 'fit-content',
+        background: "rgba(0, 0, 0, 0.4)",
+        boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.17)",
+        backdropFilter: "blur(4px)",
+        WebkitBackdropFilter: "blur(4px)",
+      }}
+      onClick={e => {
+        e.preventDefault();
+        e.stopPropagation();
+      }}
+    >
+      {messages.length > 0 && (
+        <button
+          onClick={toggleExpanded}
+          className="absolute left-4 top-2 text-white/80 hover:text-white p-1 rounded transition-colors z-10"
+          aria-label={isExpanded ? "Minimize chat" : "Expand chat"}
+        >
+          {isExpanded ? (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
+            </svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+            </svg>
+          )}
+        </button>
+      )}
+
+      <div className={`flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 ${!isExpanded ? 'max-h-[200px]' : ''}`} style={{ scrollBehavior: 'smooth' }}>
+        {messages.length === 0 && (
+          <div className="text-center text-gray-300 italic text-sm sm:text-base">
+            I am your AI wedding coordinator. Ask me anything about the wedding!
+          </div>
+        )}
+        
         {messages.map((message, index) => (
           <div
             key={index}
@@ -106,17 +173,19 @@ export const AIChatComponent: React.FC<ChatProps> = ({
               message.role === 'user' ? 'items-end' : 'items-start'
             }`}
           >
-            <div className="flex items-center gap-2">
+            <div className={`flex items-center gap-2 ${
+              message.role === 'user' ? 'flex-row-reverse' : 'flex-row'
+            }`}>
               {message.timestamp && (
-                <span className="text-xs text-gray-400">
+                <span className="text-[10px] sm:text-xs text-gray-400">
                   {message.timestamp.toLocaleTimeString()}
                 </span>
               )}
               <div
-                className={`p-3 rounded-lg max-w-[80%] ${
+                className={`p-2 sm:p-3 rounded-lg max-w-[85%] text-sm sm:text-base ${
                   message.role === 'user'
                     ? 'bg-blue-500 text-white'
-                    : 'bg-gray-100 text-gray-900'
+                    : 'bg-blue-400 text-white'
                 }`}
               >
                 {message.content}
@@ -124,7 +193,7 @@ export const AIChatComponent: React.FC<ChatProps> = ({
             </div>
             
             {message.sources && (
-              <div className="mt-2 text-sm text-gray-500">
+              <div className="mt-1 sm:mt-2 text-xs sm:text-sm text-gray-500">
                 <details className="cursor-pointer">
                   <summary className="font-medium hover:text-blue-500">View Sources</summary>
                   <ul className="mt-1 list-disc list-inside pl-2">
@@ -158,33 +227,59 @@ export const AIChatComponent: React.FC<ChatProps> = ({
             {error}
           </div>
         )}
+
+        <div 
+          ref={messagesEndRef} 
+          className="h-[1px] w-full"
+        />
       </div>
       
       <form
         onSubmit={(e) => {
           e.preventDefault();
+          e.stopPropagation();
           if (input.trim() && !loading) {
+            // Prevent scroll on submit
+            setTimeout(() => {
+              window.scrollTo({
+                top: 0,
+                behavior: 'auto'
+              });
+            }, 0);
             sendMessage(input.trim());
           }
         }}
-        className="p-4 border-t border-gray-200"
+        className="sticky bottom-0 p-3 sm:p-4 border-t border-gray-200/20 bg-black/40"
+        onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex space-x-4">
+        <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
           <input
             type="text"
             value={input}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              if (!isExpanded) {
+                setIsExpanded(true);
+              }
+            }}
+            onFocus={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+            }}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Ask a question..."
-            className="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex-1 p-2 text-sm sm:text-base border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-black/20 text-white placeholder-gray-300"
             disabled={loading}
+            placeholder={isExpanded ? "Ask a question..." : "Ask me anything about the wedding..."}
           />
           <button
             type="submit"
             disabled={!input.trim() || loading}
-            className="px-4 py-2 bg-blue-500 text-white rounded-lg disabled:opacity-50 hover:bg-blue-600 transition-colors"
+            className="w-full sm:w-auto px-3 sm:px-4 py-2 text-sm sm:text-base bg-blue-500/80 text-white rounded-lg disabled:opacity-100 hover:bg-blue-600/80 transition-colors"
             aria-label={loading ? 'Sending message...' : 'Send message'}
+            onClick={(e) => e.stopPropagation()}
           >
-            Send
+            {loading ? 'Thinking...' : 'Send'}
           </button>
         </div>
       </form>
