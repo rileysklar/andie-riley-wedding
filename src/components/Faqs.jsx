@@ -31,7 +31,14 @@ export default function Faq(theme) {
         </>
       ),
     },
-
+    {
+      question: "What should I bring?",
+      answer: (
+        <>
+         In addition to your dancing shoes, please bring cash to tip the bartenders. A card for the couple, the bride is a stationary enthusiast and is excited to have physical cards as a memory for the event.  
+        </>
+      ),
+    },
     {
       question: "What time should I arrive to the ceremony?",
       answer: "TBD",
@@ -200,6 +207,26 @@ export default function Faq(theme) {
       </div>
       <Accordion items={faqData} />
       <div className="flex flex-col items-center align-center justify-end"></div>
+      <div className="hidden">Andie and Riley's Wedding Details
+
+Date and Location:
+
+Ceremony: Sunday, May 4, 2025, at 4 PM, Ivy Hall, San Antonio, TX
+Rehearsal Dinner: Friday, May 2, 2025, on the Riverwalk, San Antonio
+Cinco de Mayo Brunch: Monday, May 5, 2025
+Schedule:
+
+Ceremony at 4 PM
+Dinner, cocktail hour, and dancing follow the ceremony
+Important Notes:
+
+No dogs allowed at the wedding
+Lincoln is expected to party the hardest, so keep an eye on him!
+FAQs:
+
+What time does the ceremony start? 4 PM on May 4
+What should I wear? Formal/cocktail attire is appropriate
+Most general questions are about the wedding, so feel free to ask if you're unsure!</div>
     </div>
   );
 }
