@@ -41,7 +41,7 @@ export default function Faq(theme) {
     },
     {
       question: "What time should I arrive to the ceremony?",
-      answer: "TBD",
+      answer: "3:45pm",
     },
     {
       question: "What is Fiesta?",
