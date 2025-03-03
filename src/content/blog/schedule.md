@@ -13,7 +13,7 @@ Since 1891, Fiesta has been an annual tradition. Join us in the streets of San A
 
 - **Sunday, 5/4 - Wedding Day**
 
-The main event will take place approximately at 4pm (TBD).
+The main event will take place approximately at 3:45pm. We will have a cocktail hour after the ceremony, dinner, and dancing.
 
 ---
 
