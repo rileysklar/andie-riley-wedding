@@ -37,11 +37,14 @@ export default function Location() {
             Sunday, May 4, 2025
           </h3>
 
-          <a href="https://www.theknot.com/us/riley-sklar-and-andie-goc-apr-2025/rsvp">
-            <div className="text-white shadow-2xl my-button mx-auto h-16 w-64 mt-4 pt-[4px] flex justify-center items-center rounded-lg cursor-pointer relative overflow-hidden">
-              Click to RSVP
-            </div>
-          </a>
+          <div className="text-gray-400 bg-gray-700/50 shadow-md my-button mx-auto h-16 w-64 mt-4 pt-[4px] flex justify-center items-center rounded-lg relative overflow-hidden cursor-not-allowed">
+            <span className="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              RSVP Now Closed
+            </span>
+          </div>
         </div>
       </div>
       {isMounted && (
