@@ -45,6 +45,11 @@ export default function Location() {
               RSVP Now Closed
             </span>
           </div>
+          {/* <a href="https://www.theknot.com/us/riley-sklar-and-andie-goc-apr-2025/rsvp">
+            <div className="text-white shadow-2xl my-button mx-auto h-16 w-64 mt-4 pt-[4px] flex justify-center items-center rounded-lg cursor-pointer relative overflow-hidden">
+              Click to RSVP
+            </div>
+          </a> */}
         </div>
       </div>
       {isMounted && (
