@@ -14,9 +14,9 @@ Join us for traditional Irish fare, import drafts, and live piano entertainment 
 
 ---
 
-### **Saturday, 5/3 at 10am - Fiesta San Fernando**
+### **Saturday, 5/3 at 11:30am - Fiesta San Fernando**
 
-Join us at Fiesta San Fernando, where San Antonio's fiesta tradition began over 260 years ago! This free event at Main Plaza features live entertainment, family-cooked food, and beautiful arts and crafts. You'll have a great view of the parades while enjoying delicious food and drinks.
+Join us at Fiesta San Fernando, where San Antonio's fiesta tradition began over 260 years ago! The bride and groom will be arriving around 11:30am. This free event at Main Plaza features live entertainment, family-cooked food, and beautiful arts and crafts. You'll have a great view of the parades while enjoying delicious food and drinks.
 
 **Time:** 10:00 AM - 12:00 AM  
 **Location:** Main Plaza, 115 Main Ave  
@@ -28,7 +28,7 @@ Join us at Fiesta San Fernando, where San Antonio's fiesta tradition began over 
 
 The main event will take place approximately at 3:45pm. We will have a cocktail hour after the ceremony, dinner, and dancing.
 
-### **After-Party at 10 PM - Gimme Gimme**
+### **Sunday, 5/4 After-Party at 10 PM - Gimme Gimme**
 Join us for a rock 'n' roll vibe at this walking distance dive bar. Enjoy cocktails, food, and great company as we continue the celebration!
 
 **Location:** 803 S St Mary's St, San Antonio, TX 78205  
@@ -37,4 +37,4 @@ Join us for a rock 'n' roll vibe at this walking distance dive bar. Enjoy cockta
 
 ### **Monday, 5/5 at 11am - Cinco de Mayo Brunch**
 
-Join us for a Mexican-style brunch and pool party at our rental house in the area. Come and go as you please or stay all day!
+Join us for a Mexican-style brunch and pool party at our rental house in the area. Come and go as you please or stay all day! Text Riley or Andie for the address. 
