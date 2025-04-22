@@ -99,7 +99,7 @@ time {
 }
 
 .cactus {
-  background-image: url("/public/cactus.svg");
+  background-image: url("/cactus.svg");
   background-size: 1000px;
   background-repeat: repeat;
 }
