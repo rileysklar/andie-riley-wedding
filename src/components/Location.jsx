@@ -30,7 +30,7 @@ export default function Location() {
               rel="noopener noreferrer"
               className="underline"
             >
-              127 South St. Mary&apos;s Street, San Antonio, Texas
+              1127 South St. Mary&apos;s Street, San Antonio, Texas
             </a>
           </h5>
           <h3 className="text-[24px] py-2 text-center text-pretty">
