@@ -2,31 +2,46 @@ import React, { useEffect, useState } from "react";
 
 const Countdown = () => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
+  const [isWeddingPast, setIsWeddingPast] = useState(false);
 
   function calculateTimeLeft() {
-    let year = new Date().getFullYear();
-    const difference = +new Date(`2025-05-04T16:00:00-06:00`) - +new Date();
+    const weddingDate = new Date(`2025-05-04T16:00:00-05:00`);
+    const difference = weddingDate - new Date();
     let timeLeft = {};
 
     if (difference > 0) {
+      // Counting down to wedding
       timeLeft = {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
         minutes: Math.floor((difference / 1000 / 60) % 60),
         seconds: Math.floor((difference / 1000) % 60),
       };
+    } else {
+      // Counting up since wedding
+      const timeSince = Math.abs(difference);
+      timeLeft = {
+        days: Math.floor(timeSince / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((timeSince / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((timeSince / 1000 / 60) % 60),
+        seconds: Math.floor((timeSince / 1000) % 60),
+      };
     }
 
     return timeLeft;
   }
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      const newTimeLeft = calculateTimeLeft();
+      setTimeLeft(newTimeLeft);
+      // Use the same wedding date as in calculateTimeLeft
+      const weddingDate = new Date(`2025-05-04T16:00:00-05:00`);
+      setIsWeddingPast(weddingDate - new Date() <= 0);
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   const timerComponents = [];
 
@@ -51,9 +66,9 @@ const Countdown = () => {
 
   return (
     <div className="flex flex-col items-center">
-      Countdown 🎉{" "}
+      {isWeddingPast ? "Since the wedding 💍" : "Countdown until the wedding 🎉"}{" "}
       <div className="flex text-lg gap-4 items-center align-center justify-center text-[#fff] mb-4">
-        {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+        {timerComponents}
       </div>
     </div>
   );
